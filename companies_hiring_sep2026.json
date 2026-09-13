@@ -1,0 +1,226 @@
+{
+  "healthcare": [
+    {
+      "name": "UnitedHealth Group (Optum)",
+      "hq": "Minnetonka, Minnesota",
+      "trait": "Largest US healthcare company by revenue; Optum spans technology, data analytics, pharmacy benefits, and care delivery; thousands of clinical, tech, and operations roles across the US.",
+      "open_roles_hint": "1,000 grad/intern hires announced for 2026; broad ongoing clinical and corporate hiring."
+    },
+    {
+      "name": "HCA Healthcare",
+      "hq": "Nashville, Tennessee",
+      "trait": "One of the largest hospital operators in the US with ~320,000 employees; runs hospitals, surgical centers, and freestanding emergency rooms across many states.",
+      "open_roles_hint": "Wide range of clinical, administrative, and support roles across many hospitals."
+    },
+    {
+      "name": "Mayo Clinic",
+      "hq": "Rochester, Minnesota",
+      "trait": "Top-ranked academic medical center known for integrative practice; large research, clinical, and administrative workforce with ongoing national recruiting.",
+      "open_roles_hint": "Active clinical, research, and administrative openings across multiple campuses."
+    },
+    {
+      "name": "Cleveland Clinic",
+      "hq": "Cleveland, Ohio",
+      "trait": "Nonprofit academic medical center with a large multi-hospital system; major employer of physicians, nurses, and allied health professionals regionally and internationally.",
+      "open_roles_hint": "Broad clinical, research, and support roles across Ohio and partner locations."
+    },
+    {
+      "name": "Becton, Dickinson and Company (BD)",
+      "hq": "Franklin Lakes, New Jersey",
+      "trait": "Global medical technology company with significant US manufacturing, R&D, and distribution footprint; produces devices, consumables, and automation systems.",
+      "open_roles_hint": "Ongoing manufacturing, engineering, quality, and corporate roles."
+    }
+  ],
+  "manufacturing_industrial": [
+    {
+      "name": "Boeing",
+      "hq": "Arlington, Virginia",
+      "trait": "Aerospace and defense giant actively hiring factory workers at 100-140 per week in 2026 — the highest rate since 2024; builds commercial aircraft, satellites, and defense systems.",
+      "open_roles_hint": "100-140 factory workers/week; production, engineering, and skilled trades roles."
+    },
+    {
+      "name": "Tesla",
+      "hq": "Austin, Texas",
+      "trait": "EV and clean energy manufacturer expanding with Megafactories and the Terafab chip project; multiple hiring pushes in 2026 across Austin, Texas, and California.",
+      "open_roles_hint": "$200M Megafactory near Houston hiring; Terafab chip team recruiting in Palo Alto and Austin."
+    },
+    {
+      "name": "John Deere",
+      "hq": "Moline, Illinois",
+      "trait": "Agricultural and construction equipment manufacturer with a strong skilled trades and production presence at multiple US plants; active pipefitting, HVAC, and maintenance roles.",
+      "open_roles_hint": "Active production & skilled trades jobs including pipefitting and HV maintenance."
+    },
+    {
+      "name": "Caterpillar",
+      "hq": "Irving, Texas",
+      "trait": "World's leading construction and mining equipment manufacturer; large US manufacturing footprint and extensive dealer network driving demand for production and field service roles.",
+      "open_roles_hint": "Broad manufacturing, engineering, and dealer service roles."
+    },
+    {
+      "name": "Stellantis (US operations)",
+      "hq": "Auburn Hills, Michigan",
+      "trait": "Major automaker (Jeep, Chrysler, Ram, Dodge) with large US manufacturing footprint; despite salaried reductions of over 20,000 across Detroit automakers, manufacturing floor hiring continues.",
+      "open_roles_hint": "Manufacturing and skilled trades roles despite overall salaried reductions."
+    }
+  ],
+  "retail_consumer": [
+    {
+      "name": "Walmart",
+      "hq": "Bentonville, Arkansas",
+      "trait": "Largest US private employer; its 2026 Jobs Spotlight Report highlights rapid change and ongoing hiring across stores, supply chain, and corporate technology roles.",
+      "open_roles_hint": "Constant large-scale hiring across retail, supply chain, and corporate functions."
+    },
+    {
+      "name": "Amazon",
+      "hq": "Seattle, Washington",
+      "trait": "E-commerce, logistics, and cloud giant with extensive retail stores, fulfillment centers, and corporate roles; Amazon Logistics team lists 313+ open roles on its careers page.",
+      "open_roles_hint": "Broad retail, warehouse, and corporate hiring; 313+ open roles in Logistics alone."
+    },
+    {
+      "name": "Costco Wholesale",
+      "hq": "Issaquah, Washington",
+      "trait": "Membership warehouse club with consistent hiring for warehouse, retail, and corporate roles; known for strong employee retention and competitive wages.",
+      "open_roles_hint": "Ongoing warehouse, retail, and corporate openings."
+    },
+    {
+      "name": "Burger King (Restaurant Brands International)",
+      "hq": "Miami, Florida",
+      "trait": "Quick-service restaurant brand that announced hiring up to 60,000 team members across US restaurants in 2026, one of the largest QSR seasonal hiring pushes.",
+      "open_roles_hint": "Target of 60,000 team members across US restaurants."
+    },
+    {
+      "name": "The Home Depot",
+      "hq": "Atlanta, Georgia",
+      "trait": "Largest home improvement retailer; actively expanding store footprint and competing with new Lowe's locations; extensive retail, supply chain, and corporate hiring.",
+      "open_roles_hint": "Retail, supply chain, and corporate roles across US stores and distribution centers."
+    }
+  ],
+  "transport_logistics": [
+    {
+      "name": "FedEx",
+      "hq": "Memphis, Tennessee",
+      "trait": "Global logistics and package delivery giant with ongoing warehouse, transportation, and corporate roles; operates one of the world's largest air and ground delivery networks.",
+      "open_roles_hint": "Warehouse operations, driver, pilot, and corporate roles across hubs."
+    },
+    {
+      "name": "UPS",
+      "hq": "Atlanta, Georgia",
+      "trait": "World's largest package delivery company; extensive hub network and seasonal plus continuous hiring across drivers, warehouse employees, and corporate logistics positions.",
+      "open_roles_hint": "Broad logistics, driver, package handler, and warehouse roles."
+    },
+    {
+      "name": "XPO Logistics",
+      "hq": "Greenwich, Connecticut",
+      "trait": "Leading less-than-truckload (LTL) freight and logistics provider with extensive trucking, warehousing, and last-mile operations and ongoing hiring.",
+      "open_roles_hint": "Drivers, warehouse workers, dispatchers, and corporate logistics roles."
+    },
+    {
+      "name": "A.P. Moller-Maersk",
+      "hq": "Houston, Texas (significant US operations)",
+      "trait": "Global shipping and logistics leader with major US warehouse and transportation hiring; expanding US warehousing and transportation capabilities.",
+      "open_roles_hint": "Warehousing and transportation roles across US operations."
+    },
+    {
+      "name": "Amazon Logistics",
+      "hq": "Seattle, Washington",
+      "trait": "Amazon's in-house transportation and last-mile delivery network; careers page shows 313+ open roles as the company expands delivery capabilities worldwide.",
+      "open_roles_hint": "313+ open roles in logistics, operations, and transportation."
+    }
+  ],
+  "energy_utilities": [
+    {
+      "name": "NextEra Energy",
+      "hq": "Juno Beach, Florida",
+      "trait": "World's largest generator of renewable energy from wind and solar; parent of Florida Power & Light; major grid modernization and clean energy hiring across Florida and beyond.",
+      "open_roles_hint": "Grid operations, renewable project development, and corporate roles."
+    },
+    {
+      "name": "Duke Energy",
+      "hq": "Charlotte, North Carolina",
+      "trait": "One of the largest electric power holding companies in the US; extensive grid operations, system operations training, and corporate roles across the Carolinas, Florida, and Midwest.",
+      "open_roles_hint": "System operations, technical trainer, and corporate roles; active recruiting."
+    },
+    {
+      "name": "Tesla Energy",
+      "hq": "Austin, Texas",
+      "trait": "Solar and battery storage division of Tesla; ramped up US solar manufacturing hiring in early 2026; growing energy storage deployments and solar product engineering.",
+      "open_roles_hint": "Solar manufacturing, storage deployment, and technical sales engineering roles."
+    },
+    {
+      "name": "Ørsted",
+      "hq": "Houston, Texas (US operations)",
+      "trait": "Global offshore wind leader with significant US East Coast wind farm projects; US careers page lists 42+ vacancies across administration, engineering, and operations.",
+      "open_roles_hint": "~42 vacancies in US; offshore wind project and marine operations roles."
+    },
+    {
+      "name": "AES",
+      "hq": "Arlington, Virginia",
+      "trait": "Global power company focused on renewables and energy storage; named one of the world's best workplaces; expanding US renewable energy portfolio and hiring.",
+      "open_roles_hint": "Renewable energy development, operations, and corporate roles."
+    }
+  ],
+  "construction_realestate": [
+    {
+      "name": "Lennar",
+      "hq": "Miami, Florida",
+      "trait": "One of the largest US homebuilders by volume; active construction manager and field roles across many communities nationwide, with new job postings as of September 2026.",
+      "open_roles_hint": "Construction manager and field roles across nationwide homebuilding communities."
+    },
+    {
+      "name": "D.R. Horton",
+      "hq": "Williamsburg, Virginia",
+      "trait": "Largest homebuilder by volume in the US; employs thousands of construction workers, supervisors, and support staff across residential construction operations.",
+      "open_roles_hint": "Broad construction and support roles across US homebuilding operations."
+    },
+    {
+      "name": "Bechtel",
+      "hq": "Reston, Virginia",
+      "trait": "Global engineering, procurement, and construction giant working on megaprojects, infrastructure, and energy; active hiring of engineers, project managers, supervisors, and skilled craft.",
+      "open_roles_hint": "Superintendents, supervisors, engineers, and skilled craft professionals."
+    },
+    {
+      "name": "Turner Construction Company",
+      "hq": "New York, New York",
+      "trait": "One of the largest construction management firms in the US; active project openings and diverse career paths across commercial, healthcare, and institutional construction.",
+      "open_roles_hint": "Project management, field supervision, and office roles."
+    },
+    {
+      "name": "CBRE Group",
+      "hq": "Dallas, Texas",
+      "trait": "Global leader in commercial real estate services and investment; one of the largest CRE employers with extensive brokerage, property management, and corporate roles.",
+      "open_roles_hint": "Broad commercial real estate brokerage, property management, and corporate roles."
+    }
+  ],
+  "sales_saaS": [
+    {
+      "name": "Salesforce",
+      "hq": "San Francisco, California",
+      "trait": "World's #1 CRM and enterprise SaaS leader; committed to hiring 1,000 new graduates and interns in 2026; strong AI-focused hiring with enterprise agent roles.",
+      "open_roles_hint": "1,000 grad/intern hires announced; broad engineering, sales, and AI agent roles."
+    },
+    {
+      "name": "ServiceNow",
+      "hq": "Santa Clara, California",
+      "trait": "Enterprise workflow automation platform with strong SaaS growth; ongoing engineering, security operations, and enterprise sales hiring across multiple functions.",
+      "open_roles_hint": "Engineering, security operations, and enterprise sales roles."
+    },
+    {
+      "name": "Stripe",
+      "hq": "San Francisco, California",
+      "trait": "Payment infrastructure platform that out-hired Big Tech in 2026 on engineering hiring growth; strong backend, payments, and enterprise sales roles.",
+      "open_roles_hint": "High engineering hiring growth; payments, backend, and sales roles."
+    },
+    {
+      "name": "Shopify",
+      "hq": "Ottawa, Canada (major US operations)",
+      "trait": "E-commerce platform with notable 2026 hiring that outpaced Big Tech; merchant services, engineering, and partnerships roles across US operations.",
+      "open_roles_hint": "Engineering and merchant-facing roles; strong 2026 hiring growth."
+    },
+    {
+      "name": "Snowflake",
+      "hq": "Bozeman, Montana / San Mateo, California",
+      "trait": "Cloud data platform leader; enterprise SaaS with strong demand for data engineering, sales, and partner ecosystem roles as enterprises adopt data cloud architectures.",
+      "open_roles_hint": "Data engineering, enterprise sales, and cloud platform roles."
+    }
+  ]
+}

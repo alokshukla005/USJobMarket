@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.S. Job Market Navigator 2026 — Roles, Industries & Switching Guides</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #171b25;
+    --surface2: #1e2332;
+    --border: #2a2f3e;
+    --text: #e2e6f0;
+    --muted: #8b93a7;
+    --accent: #60a5fa;
+    --accent2: #a78bfa;
+    --green: #34d399;
+    --orange: #fb923c;
+    --red: #f87171;
+    --yellow: #fbbf24;
+    --teal: #22d3ee;
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.65;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* ── Layout ── */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 60px 0; border-bottom: 1px solid var(--border); scroll-margin-top: 70px; }
+  section:last-of-type { border-bottom: none; }
+
+  /* ── Header ── */
+  header.site {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(15,17,23,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex; align-items: center; gap: 16px;
+    height: 56px;
+  }
+  .logo {
+    font-weight: 700; font-size: 16px; letter-spacing: -0.02em;
+    color: var(--accent); white-space: nowrap;
+  }
+  .logo span { color: var(--text); }
+  .nav-links { display: flex; gap: 4px; margin-left: auto; }
+  .nav-links a {
+    color: var(--muted); text-decoration: none; font-size: 13px;
+    padding: 6px 10px; border-radius: 6px; transition: all 0.15s;
+  }
+  .nav-links a:hover { color: var(--text); background: var(--surface2); }
+  .nav-links a.active { color: var(--accent); background: rgba(96,165,250,0.1); }
+  .hamburger { display: none; background: none; border: none; color: var(--text); cursor: pointer; padding: 6px; }
+  .hamburger svg { width: 22px; height: 22px; }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 80px 0 56px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 4.5vw, 48px);
+    font-weight: 800; letter-spacing: -0.03em;
+    line-height: 1.1; margin-bottom: 16px;
+  }
+  .hero h1 .accent { color: var(--accent); }
+  .hero .sub {
+    font-size: 17px; color: var(--muted); max-width: 640px;
+    margin: 0 auto 32px; line-height: 1.6;
+  }
+  .hero .pill-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 8px; }
+  .pill {
+    background: var(--surface2); border: 1px solid var(--border);
+    padding: 4px 12px; border-radius: 20px; font-size: 12px;
+    color: var(--muted); font-family: var(--mono);
+  }
+  .hero .pill.high { color: var(--green); border-color: rgba(52,211,153,0.3); }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    text-decoration: none; cursor: pointer; border: 1px solid transparent;
+    transition: all 0.15s; font-family: var(--font);
+  }
+  .btn-primary { background: var(--accent); color: #0f1117; }
+  .btn-primary:hover { filter: brightness(1.1); }
+  .btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+  .btn-ghost:hover { background: var(--surface2); border-color: var(--muted); }
+  .btn-sm { padding: 6px 12px; font-size: 12px; }
+
+  /* ── Market Snapshot Bar ── */
+  .snapshot {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin-top: 32px;
+  }
+  .snapshot-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 18px;
+  }
+  .snapshot-card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .snapshot-card .value { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+  .snapshot-card .note { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* ── Section Headers ── */
+  .section-header { margin-bottom: 32px; }
+  .section-header h2 {
+    font-size: clamp(22px, 3vw, 30px); font-weight: 700; letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .section-header p { color: var(--muted); font-size: 15px; max-width: 600px; }
+
+  /* ── Industry Cards Grid ── */
+  .industry-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px;
+  }
+  .industry-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px; cursor: pointer;
+    transition: all 0.15s; position: relative; overflow: hidden;
+  }
+  .industry-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .industry-card .rank {
+    position: absolute; top: 12px; right: 14px;
+    font-size: 11px; font-weight: 700; color: var(--muted);
+    font-family: var(--mono);
+  }
+  .industry-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.01em; }
+  .industry-card .meta { font-size: 12px; color: var(--muted); margin-bottom: 10px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .industry-card .meta .open { color: var(--green); font-family: var(--mono); }
+  .industry-card .desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+  .industry-card .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+  .industry-card .tag { font-size: 10px; padding: 2px 7px; border-radius: 4px; background: rgba(96,165,250,0.1); color: var(--accent); border: 1px solid rgba(96,165,250,0.2); font-family: var(--mono); }
+
+  /* ── Industry Detail Panel ── */
+  .industry-detail {
+    display: none;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 28px 32px; margin-top: 20px;
+    animation: fadeUp 0.2s ease;
+  }
+  .industry-detail.open { display: block; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .detail-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; gap: 16px; }
+  .detail-header h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+  .detail-header .close-btn {
+    background: none; border: none; color: var(--muted); cursor: pointer;
+    font-size: 20px; padding: 4px; line-height: 1;
+  }
+  .detail-header .close-btn:hover { color: var(--text); }
+  .detail-overview { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+  .detail-overview strong { color: var(--text); }
+
+  /* ── Experience Bands ── */
+  .bands { display: flex; flex-direction: column; gap: 16px; }
+  .band {
+    border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px;
+    transition: border-color 0.15s;
+  }
+  .band:hover { border-color: var(--muted); }
+  .band-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .band-badge {
+    font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 5px;
+    font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .badge-fresher { background: rgba(96,165,250,0.15); color: var(--accent); border: 1px solid rgba(96,165,250,0.25); }
+  .badge-early { background: rgba(167,139,250,0.15); color: var(--accent2); border: 1px solid rgba(167,139,250,0.25); }
+  .badge-mid { background: rgba(52,211,153,0.15); color: var(--green); border: 1px solid rgba(52,211,153,0.25); }
+  .badge-senior { background: rgba(251,146,60,0.15); color: var(--orange); border: 1px solid rgba(251,146,60,0.25); }
+  .badge-exec { background: rgba(251,191,36,0.15); color: var(--yellow); border: 1px solid rgba(251,191,36,0.25); }
+  .band-title { font-size: 15px; font-weight: 600; }
+  .band-sub { font-size: 12px; color: var(--muted); }
+
+  .role-list { display: flex; flex-direction: column; gap: 8px; }
+  .role-row {
+    display: grid; grid-template-columns: 1fr 120px 140px; gap: 12px; align-items: start;
+    padding: 10px 0; border-bottom: 1px solid var(--border);
+  }
+  .role-row:last-child { border-bottom: none; }
+  .role-name { font-weight: 600; font-size: 14px; }
+  .role-skills { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .skill-tag { display: inline-block; font-size: 10px; padding: 1px 5px; border-radius: 3px; background: var(--surface2); color: var(--accent); margin: 1px 2px 1px 0; font-family: var(--mono); }
+  .salary { font-family: var(--mono); font-size: 12px; color: var(--green); text-align: right; white-space: nowrap; }
+
+  .companies-box {
+    margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);
+  }
+  .companies-box h4 { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .company-pills { display: flex; flex-wrap: wrap; gap: 5px; }
+  .company-pill {
+    font-size: 12px; padding: 4px 10px; border-radius: 6px;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text); font-family: var(--mono);
+  }
+
+  /* ── Switching Guides ── */
+  .switch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+  .switch-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 18px 20px; cursor: pointer;
+    transition: all 0.15s;
+  }
+  .switch-card:hover { border-color: var(--accent2); }
+  .switch-card .icon { font-size: 22px; margin-bottom: 4px; }
+  .switch-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+  .switch-card .sub { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .switch-card .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .switch-card .tag { font-size: 10px; padding: 2px 7px; border-radius: 4px; background: rgba(167,139,250,0.1); color: var(--accent2); border: 1px solid rgba(167,139,250,0.2); font-family: var(--mono); }
+
+  .switch-detail {
+    display: none;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px 28px; margin-top: 16px;
+    animation: fadeUp 0.2s ease;
+  }
+  .switch-detail.open { display: block; }
+  .switch-detail h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .switch-detail .switch-meta { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+  .switch-detail h5 { font-size: 13px; font-weight: 600; color: var(--accent2); margin: 14px 0 6px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .switch-detail ul { padding-left: 20px; font-size: 14px; line-height: 1.6; color: var(--text); }
+  .switch-detail li { margin-bottom: 3px; }
+  .switch-detail .salary-flow { font-family: var(--mono); font-size: 13px; color: var(--green); line-height: 1.7; }
+
+  /* ── Footer ── */
+  footer { padding: 40px 0; text-align: center; color: var(--muted); font-size: 13px; }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* ── Back to top ── */
+  #to-top {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--accent); color: #0f1117; border: none; cursor: pointer;
+    font-size: 18px; display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 200;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+  #to-top.show { opacity: 1; pointer-events: auto; }
+
+  /* ── Responsive ── */
+  @media (max-width: 700px) {
+    .nav-links { display: none; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px; position: absolute; top: 64px; right: 16px; min-width: 180px; }
+    .nav-links.open { display: flex; }
+    .hamburger { display: block; }
+    .role-row { grid-template-columns: 1fr; gap: 4px; }
+    .salary { text-align: left; }
+    .company-pills { flex-direction: column; }
+    .hero { padding: 48px 0 36px; }
+    section { padding: 40px 0; }
+    .industry-detail { padding: 20px; }
+    .snapshot { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+  /* Selection */
+  ::selection { background: rgba(96,165,250,0.3); color: white; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav-inner">
+    <div class="logo">US<span> Job Market</span></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#snapshot">Snapshot</a>
+      <a href="#industries">Industries</a>
+      <a href="#switching">Switching</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero container">
+  <h1>U.S. Job Market <span class="accent">Navigator</span></h1>
+  <p class="sub">A data-grounded map of the most in-demand U.S. industries and the highest-paying roles inside them — from fresh graduate to VP — plus switching guides and a skills portfolio for every path. Data sourced from BLS, Indeed, Monster, Robert Half, LinkedIn, Glassdoor, and Hays, September 2026.</p>
+
+  <div class="pill-row">
+    <span class="pill high">Healthcare: +47.5% of all 2025 job growth</span>
+    <span class="pill">Tech hiring normalized, AI/ML still hot</span>
+    <span class="pill">60% of managers hiring in H1 2026</span>
+    <span class="pill">Midwest & Sunbelt gaining momentum</span>
+  </div>
+
+  <div class="cta-buttons">
+    <a href="#industries" class="btn btn-primary">Explore Industries →</a>
+    <a href="#switching" class="btn btn-ghost">Switching Guides</a>
+  </div>
+
+  <div class="snapshot" id="snapshot">
+    <div class="snapshot-card">
+      <div class="label">Total U.S. Nonfarm Employment</div>
+      <div class="value">~175M</div>
+      <div class="note">Projected +5.2M jobs by 2034 (BLS)</div>
+    </div>
+    <div class="snapshot-card">
+      <div class="label">Fastest-Growing Sector</div>
+      <div class="value">Healthcare</div>
+      <div class="note">+8.4% growth; ~2.0M new jobs 2024–34</div>
+    </div>
+    <div class="snapshot-card">
+      <div class="label">2nd Fastest</div>
+      <div class="value">Prof. Services</div>
+      <div class="note">+7.5%; 812,500 new jobs; AI consulting boom</div>
+    </div>
+    <div class="snapshot-card">
+      <div class="label">3rd Fastest</div>
+      <div class="value">Information / IT</div>
+      <div class="note">+6.5%; software + cloud infrastructure</div>
+    </div>
+    <div class="snapshot-card">
+      <div class="label">Median Tech Salary</div>
+      <div class="value">~$112K</div>
+      <div class="note">2× national median; AI roles $160K–$300K+</div>
+    </div>
+    <div class="snapshot-card">
+      <div class="label">Hiring Outlook Q3 2026</div>
+      <div class="value">45% NEO</div>
+      <div class="note">Construction/RE highest at 55% (Manpower)</div>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="container">
+    <div class="section-header">
+      <h2>Most In-Demand U.S. Industries</h2>
+      <p>Ranked by live open roles and structural growth outlook. Click any industry to see popular roles across all experience levels — fresher through VP — with salary ranges and representative companies hiring now.</p>
+    </div>
+    <div class="industry-grid" id="industryGrid"></div>
+    <div id="industryDetail" class="industry-detail"></div>
+  </div>
+</section>
+
+<!-- SWITCHING -->
+<section id="switching">
+  <div class="container">
+    <div class="section-header">
+      <h2>Switching Guides & Skills Portfolio</h2>
+      <p>How to move into high-paying roles from any background. Each guide covers timeline, key skills and certifications, portfolio ideas, entry points, and realistic salary progression.</p>
+    </div>
+    <div class="switch-grid" id="switchGrid"></div>
+    <div id="switchDetail" class="switch-detail"></div>
+  </div>
+</section>
+
+<!-- SKILLS MATRIX -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header">
+      <h2>Consolidated Skills Portfolio</h2>
+      <p>A quick-reference matrix of the most valuable skills by role family — what to build, in what order, and what pays a premium.</p>
+    </div>
+    <div id="skillsContent"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>U.S. Job Market Navigator — data sourced from BLS OOH, Indeed Hiring Lab, Monster Q2 2026 Market Report, Robert Half Demand for Skilled Talent, LinkedIn 2026 Top Companies, Glassdoor Best Places to Work 2026, Hays 2026 Salary Guide, and PursuitCI live index, September 2026.</p>
+    <p style="margin-top:6px;">Built as a lightweight navigation tool. Salaries are indicative ranges — always verify against current postings and Levels.fyi for specific companies.</p>
+  </div>
+</footer>
+
+<button id="to-top" aria-label="Back to top">↑</button>
+
+<script>
+// ─── DATA ────────────────────────────────────────────────────────
+
+const industries = [
+  {
+    id: 'tech',
+    name: 'Technology & Data',
+    tagline: 'AI/ML, Software, Cloud, Cybersecurity, Data Engineering',
+    openRoles: '~102,400',
+    companies: 2354,
+    growth: 'IT +6.5% (BLS 2024–34); AI Engineer fastest-growing US role (LinkedIn)',
+    desc: 'The largest single source of open roles by count. Hiring has normalized from the 2021 boom but AI/ML, cloud infrastructure, and cybersecurity remain red-hot. Software engineering is still the biggest pool of openings, but growth is now concentrated in infrastructure, data, and applied AI rather than speculative product expansion.',
+    tags: ['AI/ML','SWE','Data','Cloud','Cybersecurity','DevOps'],
+    color: '#60a5fa',
+    roles: {
+      fresher: [
+        { name: 'Junior Software Engineer / Front-End Developer', salary: '$85K–$130K', skills: 'JavaScript/TypeScript, React/Vue, Git, basic Python or Java, REST APIs' },
+        { name: 'Associate Data Analyst / BI Analyst', salary: '$65K–$95K', skills: 'SQL, Excel, Python (pandas), Tableau/Power BI, statistics basics' },
+        { name: 'IT Support / Cloud Support Associate', salary: '$55K–$80K', skills: 'OS fundamentals, networking basics, AWS/Azure support certs, troubleshooting' },
+        { name: 'Junior Cybersecurity Analyst / SOC Analyst', salary: '$70K–$100K', skills: 'Security fundamentals (Security+), SIEM tools, network monitoring, Linux' }
+      ],
+      early: [
+        { name: 'Software Engineer (SWE II)', salary: '$130K–$200K', skills: 'One language deeply (Python/Java/TS/C++), system design basics, testing, CI/CD, cloud (AWS/GCP/Azure)' },
+        { name: 'Data Scientist / ML Engineer (early)', salary: '$130K–$180K', skills: 'Python, SQL, PyTorch/Scikit-learn, statistics, A/B testing, data pipelines' },
+        { name: 'Cloud / DevOps Engineer', salary: '$125K–$175K', skills: 'AWS/Azure/GCP, Terraform, Kubernetes, Docker, CI/CD, scripting' },
+        { name: 'Cybersecurity Engineer', salary: '$115K–$160K', skills: 'Network security, IAM, incident response, cloud security, scripting, relevant certs' }
+      ],
+      mid: [
+        { name: 'Senior Software Engineer / Staff Engineer', salary: '$170K–$280K', skills: 'System architecture, distributed systems, mentoring, cross-team ownership, deep domain expertise' },
+        { name: 'Senior ML Engineer / AI Engineer', salary: '$170K–$300K+', skills: 'LLM fine-tuning (RLHF/DPO), PyTorch/JAX, distributed GPU training, MLOps, evaluation pipelines' },
+        { name: 'Data Engineer / Analytics Engineer', salary: '$150K–$220K', skills: 'Spark, dbt, Airflow, data warehouse design, advanced SQL, Python, cloud data services' },
+        { name: 'Cloud Architect / SRE', salary: '$150K–$220K', skills: 'Multi-region design, reliability/ SLOs, observability, cost optimization, Terraform at scale' },
+        { name: 'Security Architect / InfoSec Lead', salary: '$140K–$200K', skills: 'Security strategy, zero-trust, compliance frameworks, threat modeling, team leadership' }
+      ],
+      senior: [
+        { name: 'Principal Engineer / Distinguished Engineer', salary: '$250K–$450K+ TC', skills: 'Org-wide technical strategy, cross-system architecture, research direction, high-leverage technical decisions' },
+        { name: 'AI Research Scientist (applied)', salary: '$250K–$400K+ TC', skills: 'Published research or equivalent impact, frontier model work, novel architectures, strong math/ML theory' },
+        { name: 'Engineering Manager (EM)', salary: '$180K–$280K base + equity', skills: 'People management, hiring, project delivery, technical judgment, stakeholder alignment' }
+      ],
+      exec: [
+        { name: 'Director of Engineering / VP Engineering', salary: '$250K–$500K+ TC', skills: 'Organization design, roadmap strategy, budgeting, multi-team delivery, executive influence' },
+        { name: 'VP of Data / AI / Security / Cloud', salary: '$300K–$600K+ TC', skills: 'Strategic vision, capital allocation, board-level communication, M&A/integration, industry reputation' }
+      ]
+    },
+    companies: [
+      { name: 'Google', hq: 'Mountain View, CA', hint: 'Alphabet; AI-first (Gemini); largest tech employer; broad SWE, ML, cloud, infra hiring' },
+      { name: 'Microsoft', hq: 'Redmond, WA', hint: 'Azure + Copilot AI across all products; 15K+ layoffs in 2025 but still hiring AI/Cloud; enterprise + gaming' },
+      { name: 'Amazon', hq: 'Seattle, WA', hint: 'AWS cloud king + Alexa/AI + retail/logistics tech; embedding AI across products; builders, applied scientists, engineers' },
+      { name: 'Meta', hq: 'Menlo Park, CA', hint: 'LLaMA models + metaverse; aggressive AI hiring; FB/IG/WhatsApp/Threads; strong infra and ML engineering' },
+      { name: 'Apple', hq: 'Cupertino, CA', hint: 'Most aggressive AI hiring in a decade (180+ AI roles); on-device ML; 750K+ total comp for AI roles' },
+      { name: 'Netflix', hq: 'Los Gatos, CA', hint: 'Streaming + content tech; personalization/AI recommendations; global CDN and streaming infrastructure engineering' },
+      { name: 'OpenAI', hq: 'San Francisco, CA', hint: 'GPT/ChatGPT; 120+ active AI roles; 850K+ total comp for engineering; scaling infra post-GPT-5; frontier model research' },
+      { name: 'Anthropic', hq: 'San Francisco, CA', hint: 'Claude AI; 80+ active AI roles; 700K+ total comp; 45% YoY headcount growth; safety/alignment focus; profitable' },
+      { name: 'NVIDIA', hq: 'Santa Clara, CA', hint: 'GPU/AI compute dominant (80+ open roles); 236K advertised median tech salary; CUDA/software engineering for AI hardware' },
+      { name: 'Databricks', hq: 'San Francisco, CA', hint: 'Data + AI platform (25B+ valuation, IPO filed); 45+ open roles; MLOps, data engineering, lakehouse; strong data + AI' },
+      { name: 'Stripe', hq: 'San Francisco, CA', hint: 'Payment infrastructure; out-hired Big Tech in 2026 on engineering growth; strong backend, payments, enterprise API engineering' },
+      { name: 'Snowflake', hq: 'Bozeman, MT / San Mateo, CA', hint: 'Cloud data platform; 414 open roles (128 in sales/account mgmt); data engineering, analytics, AI/ML expansion' },
+      { name: 'ServiceNow', hq: 'San Diego, CA', hint: 'Enterprise workflow automation; 211K advertised median tech salary; enterprise software engineering + security operations' },
+      { name: 'Salesforce', hq: 'San Francisco, CA', hint: 'CRM giant; 1,000 grad/intern hires for 2026; 110K OTE SDR, 320K OTE AE; AI agent hiring; enterprise software + sales eng' },
+      { name: 'Workday', hq: 'Pleasanton, CA', hint: 'Enterprise cloud HCM + finance; runs ATS with 713,606+ live postings (63% of all crawled); broad GTM + enterprise software' },
+      { name: 'Palantir', hq: 'Denver, CO / Palo Alto, CA', hint: 'Defense + enterprise AI data platforms; AIP driving growth; strong backend + ML engineering for government/enterprise' },
+      { name: 'Anduril', hq: 'Denver, CO', hint: 'Defense tech / autonomous systems; AI-powered military hardware; embedded systems, robotics, AI/ML engineering; high-growth startup' },
+      { name: 'SpaceX', hq: 'Hawthorne, CA / Starbase, TX', hint: 'Space + Starlink satellites; 60+ open roles in Silicon division; thousands of applicants per entry-level role; scaling Starlink' },
+      { name: 'Scale AI', hq: 'San Francisco, CA', hint: 'Data infrastructure for AI (29B valuation); 30-40 open roles; data labeling, RLHF, evaluation; data + ML engineering for AI pipelines' },
+      { name: 'Cohere', hq: 'Toronto, Canada (US ops)', hint: 'Enterprise LLM deployment; 40+ active AI roles; 500K total comp; latency optimization, fine-tuning, retrieval; remote-friendly' }
+    ]
+  },
+   {
+    id: 'healthcare',
+    name: 'Healthcare & Life Sciences',
+    tagline: 'Clinical, Advanced Practice, Health Admin, Research, Biotech',
+    openRoles: '~83,700',
+    companies: 1198,
+    growth: 'Healthcare +8.4% (BLS 2024–34); 47.5% of all 2025 job growth (Indeed); NP +40% projected',
+    desc: 'The single strongest hiring engine in the U.S. economy — healthcare generated nearly half of all job growth in 2025 despite being only 11.4% of employment. Demand spans clinical roles (nursing, APPs, therapists), health services management, medical research, and life sciences. Aging population, expanded access, and mental health focus all drive structural growth. Hiring is nationwide, with strong opportunities in the Sunbelt and Midwest.',
+    tags: ['Nursing','APP','Health Admin','Research','Therapy','Biotech'],
+    color: '#34d399',
+    roles: {
+      fresher: [
+        { name: 'Registered Nurse (new grad / bedside)', salary: '$65K–$90K', skills: 'BSN/ADN, NCLEX licensure, clinical rotations, EHR systems, patient care fundamentals' },
+        { name: 'Medical Assistant / Patient Care Tech', salary: '$35K–$50K', skills: 'CMA/RMA certification (often paid by employer), phlebotomy, vitals, EHR, communication' },
+        { name: 'Clinical Research Coordinator', salary: '$48K–$65K', skills: 'GCP knowledge, clinical trial protocols, IRB submissions, data entry, attention to detail' },
+        { name: 'Pharmacy Technician', salary: '$35K–$50K', skills: 'PTCB certification, dispensing, insurance processing, pharmacy software' }
+      ],
+      early: [
+        { name: 'Registered Nurse (2–5 yr, specialty)', salary: '$80K–$115K', skills: 'Specialty certification (ICU, ED, OR, L&D), charge experience, precepting, EHR mastery' },
+        { name: 'Nurse Practitioner (FNP/AGNP — new grad)', salary: '$85K–$105K', skills: 'MSN/DNP, NP board cert, clinical prescriptive authority, state licensure, primary care scope' },
+        { name: 'Physician Assistant (new grad)', salary: '$90K–$110K', skills: 'PA master\'s, PANCE certification, supervised practice, procedural skills, state licensure' },
+        { name: 'Medical Technologist / Imaging Tech (Rad, RT, Lab)', salary: '$55K–$80K', skills: 'ARRT/ASCP certification, equipment operation, patient positioning, QA, PACS/lab systems' },
+        { name: 'Health Services Manager (early / dept level)', salary: '$70K–$95K', skills: 'Bachelor\'s minimum (MHA/MPA preferred), operations, budgeting basics, regulatory compliance, Epic/Cerner' }
+      ],
+      mid: [
+        { name: 'Experienced NP / PA (specialty — psych, acute, surgical)', salary: '$125K–$200K', skills: 'Specialty certification, procedural competence, multi-state licensure (compact), telehealth readiness, productivity mgmt' },
+        { name: 'Medical & Health Services Manager (manager/director level)', salary: '$100K–$150K', skills: 'MHA/MPA/MBA, departmental P&L, staff management, accreditation, change management, data-driven ops' },
+        { name: 'Clinical Informatics Manager / CMIO-track', salary: '$110K–$160K', skills: 'Clinical + IT bridge, EHR optimization, data analytics, workflow redesign, Epic Cognite/Clarity' },
+        { name: 'Clinical Research Associate / Trial Manager', salary: '$85K–$120K', skills: 'Phase I–IV trial oversight, vendor management, regulatory compliance, data monitoring, site management' },
+        { name: 'Speech-Language Pathologist / OT / PT (mid-career)', salary: '$85K–$120K', skills: 'State licensure, specialty populations, caseload management, documentation efficiency, telehealth' }
+      ],
+      senior: [
+        { name: 'Lead APP / APP Director / System CAPO', salary: '$160K–$260K+ base', skills: 'Multi-site APP oversight, credentialing, scope-of-practice strategy, clinical quality, APP recruitment/retention' },
+        { name: 'Director of Nursing / CNO (unit or facility)', salary: '$110K–$180K', skills: 'RN licensure + experience, staff development, quality/safety, regulatory readiness, budget, culture' },
+        { name: 'Chief Medical Information Officer / VP Clinical Ops', salary: '$180K–$300K+', skills: 'Clinical + digital strategy, EHR roadmap, analytics, physician/nurse engagement, capital planning' }
+      ],
+      exec: [
+        { name: 'VP of Clinical Services / Chief Nursing Officer (system)', salary: '$220K–$400K+', skills: 'Enterprise clinical strategy, multi-site operations, regulatory/government relations, talent pipeline, margin accountability' },
+        { name: 'Chief Medical Officer / SVP Medical Affairs', salary: '$250K–$500K+', skills: 'Physician leadership, clinical governance, quality/patient safety, innovation, M&A integration, board reporting' },
+        { name: 'Healthcare System COO / President', salary: '$300K–$700K+', skills: 'P&L ownership, strategic planning, regulatory navigation, capital allocation, community relations, turnaround' }
+      ]
+    },
+    companies: [
+      { name: 'HCA Healthcare', hq: 'Nashville, TN', hint: 'One of the largest US hospital operators; ~320K employees; hospitals, surgical centers, freestanding ERs across many states' },
+      { name: 'Ascension', hq: 'St. Louis, MO', hint: 'Largest not-for-profit health system in the US; broad clinical, admin, and support roles across many hospitals' },
+      { name: 'Mayo Clinic', hq: 'Rochester, MN', hint: 'Top-ranked academic medical center; large research, clinical, and administrative workforce; active national recruiting' },
+      { name: 'Cleveland Clinic', hq: 'Cleveland, OH', hint: 'Nonprofit academic medical center; major employer of physicians, nurses, and allied health professionals regionally and internationally' },
+      { name: 'Kaiser Permanente', hq: 'Oakland, CA', hint: 'Largest US managed care organization; integrated care model across regions; broad clinical and corporate hiring' },
+      { name: 'CVS Health', hq: 'Woonsocket, RI', hint: 'Retail pharmacy + health insurance (Aetna, Optum Rx); 9,000+ stores; broad retail, pharmacy, corporate, and health services roles' },
+      { name: 'UnitedHealth Group (Optum)', hq: 'Minnetonka, MN', hint: 'Largest US healthcare company by revenue; Optum spans tech, data analytics, pharmacy benefits, and care delivery — thousands of clinical, tech, and operations roles' },
+      { name: 'Elevance Health', hq: 'Indianapolis, IN', hint: 'Formerly Anthem; one of the largest health insurers; broad clinical, corporate, and health services roles across the US' },
+      { name: 'Houston Methodist', hq: 'Houston, TX', hint: 'Major academic medical center in Texas; active clinical, research, and administrative openings across multiple campuses' },
+      { name: 'Tenet Healthcare', hq: 'Dallas, TX', hint: 'Hospital operator with ~60,000 employees; broad clinical, admin, and support roles across the US hospital network' },
+      { name: 'Optum', hq: 'Eden Prairie, MN', hint: 'Health services platform of UnitedHealth Group; tech, data analytics, pharmacy, and care delivery — broad corporate and clinical roles' },
+      { name: 'Teladoc', hq: 'Palo Alto, CA / New York, NY', hint: 'Largest telehealth provider; virtual care across primary, chronic, and mental health; corporate and clinical roles' },
+      { name: 'Oak Street Health', hq: 'Chicago, IL', hint: 'Value-based primary care for Medicare population; acquired by CVS Health; broad clinical and corporate roles' },
+      { name: 'Hims & Hers', hq: 'San Francisco, CA', hint: 'Telehealth and wellness platform; broad corporate, marketing, product, and clinical operations roles' },
+      { name: 'Moderna', hq: 'Cambridge, MA', hint: 'mRNA biotech; COVID vaccine pioneer; R&D, manufacturing, and corporate roles across the US' },
+      { name: 'Pfizer', hq: 'New York, NY', hint: 'Largest US pharmaceutical company by revenue; broad R&D, manufacturing, commercial, and corporate roles nationwide' },
+      { name: 'Merck', hq: 'Rahway, NJ', hint: 'Global pharma leader (Keytruda, vaccines); R&D, manufacturing, commercial, and corporate roles across the US' },
+      { name: 'Eli Lilly', hq: 'Indianapolis, IN', hint: 'Major pharma (diabetes, obesity, Alzheimer\'s); growing US manufacturing footprint; R&D, manufacturing, and corporate roles' },
+      { name: 'Johnson & Johnson', hq: 'New Brunswick, NJ', hint: 'Diversified healthcare (medtech, pharma, consumer health); broad R&D, manufacturing, and corporate roles nationwide' },
+      { name: 'Amgen', hq: 'Thousand Oaks, CA', hint: 'Largest independent biotech; biologics manufacturing and R&D; strong operations and corporate roles' },
+      { name: 'CSL Behring', hq: 'King of Prussia, PA', hint: 'Plasma-derived therapies and biopharmaceuticals; manufacturing, R&D, and corporate roles' },
+      { name: 'Thermo Fisher Scientific', hq: 'Waltham, MA', hint: 'Life sciences tools, diagnostics, and bioprocessing; largest by revenue; broad manufacturing, R&D, and corporate roles' },
+      { name: 'LabCorp', hq: 'Burlington, NC', hint: 'Diagnostics testing and drug development; broad clinical lab, corporate, and support roles across the US' },
+      { name: 'Quest Diagnostics', hq: 'Secaucus, NJ', hint: 'Clinical diagnostics testing leader; broad lab operations, corporate, and support roles nationwide' }
+    ]
+  },
+  {
+    id: 'finance',
+    name: 'Finance, Banking & Insurance',
+    tagline: 'Investment Banking, Quant, Risk, Compliance, FP&A, Wealth',
+    openRoles: '~17,800',
+    companies: 418,
+    growth: 'Finance NEO solid; hiring selective; quant + hedge fund comp surging; risk/compliance structural demand',
+    desc: 'Finance hiring is selective but high-compensation. Investment banking and macro sales & trading remain the top-paying functions (avg total comp $445K and $653K respectively per eFinancialCareers 2026). Quant finance ($351K avg) and hedge funds ($758K avg) lead on pay. Risk, compliance, and FP&A offer more stable, structural-demand paths with lower volatility. Banks and insurers continue to hire at scale — JPMorgan Chase reclaimed the #1 spot on LinkedIn\'s 2026 Top Companies list.',
+    tags: ['IB','Quant','Risk','Compliance','FP&A','Wealth','Insurance'],
+    color: '#fb923c',
+    roles: {
+      fresher: [
+        { name: 'Investment Banking Analyst', salary: '$100K–$140K base + bonus', skills: 'Financial modeling (DCF, LBO, M&A), Excel mastery, accounting fundamentals, valuation, PowerPoint, 80-hr-week tolerance' },
+        { name: 'Financial Analyst / FP&A Analyst', salary: '$65K–$85K base', skills: 'Excel, financial modeling, ERP systems (NetSuite/SAP/Oracle), variance analysis, SQL (increasingly), communication' },
+        { name: 'Risk Analyst (market/credit/operational)', salary: '$70K–$95K', skills: 'Statistics, probability, VaR models, regulatory framework (Basel), Python/R increasingly expected, attention to detail' },
+        { name: 'Compliance Analyst (bank/insurance)', salary: '$65K–$90K', skills: 'Regulatory knowledge (AML, KYC, SOX, GDPR), documentation, monitoring, risk assessment, policy enforcement' }
+      ],
+      early: [
+        { name: 'Investment Banking Associate (post-MBA or promoted analyst)', salary: '$150K–$220K base + bonus', skills: 'Deal execution, client management, advanced modeling, sector expertise, team leadership on narrower deals' },
+        { name: 'Senior Financial Analyst / Senior FP&A', salary: '$90K–$130K', skills: 'Forecasting, budgeting, business partnering with ops, advanced modeling, presentation to leadership, ERP depth' },
+        { name: 'Quant Analyst / Financial Engineer', salary: '$130K–$200K+ base', skills: 'C++/Python, stochastic calculus, Monte Carlo, time-series, machine learning, derivatives pricing, strong math' },
+        { name: 'Wealth Management Advisor (early / associate)', salary: '$80K–$150K (base + production)', skills: 'Securities licensing (Series 7/66), financial planning, client relationship building, portfolio construction, ethics' }
+      ],
+      mid: [
+        { name: 'Vice President — Investment Banking', salary: '$250K–$450K+ TC', skills: 'Originating deals, client 관계, sector authority, managing analyst/associate teams, transaction execution' },
+        { name: 'Portfolio Manager / Fund Manager (mid)', salary: '$250K–$500K+ TC', skills: 'Investment strategy, risk-adjusted returns, position sizing, research process, team leadership, investor reporting' },
+        { name: 'Director — Corporate Finance / FP&A', salary: '$150K–$220K base + bonus', skills: 'P&L ownership, strategic planning, capital allocation, investor relations support, cross-functional leadership' },
+        { name: 'Risk Manager (mid/senior)', salary: '$140K–$200K', skills: 'Enterprise risk framework, stress testing, model validation, regulatory reporting, board-level risk communication' },
+        { name: 'Controller / Assistant Controller', salary: '$145K–$200K', skills: 'GAAP/IFRS mastery, financial reporting, audit management, internal controls, team leadership, month-end close' }
+      ],
+      senior: [
+        { name: 'Managing Director — Investment Banking', salary: '$500K–$1M+ TC', skills: 'Book of business, marquee deal origination, C-suite relationships, sector thought leadership, firm capital' },
+        { name: 'CFO / Vice President Finance (large public co)', salary: '$300K–$600K+ base; total can exceed $1M', skills: 'Enterprise financial strategy, capital markets, M&A, IR, board governance, regulatory mastery, transformation' },
+        { name: 'Chief Risk Officer / Chief Compliance Officer', salary: '$250K–$450K+', skills: 'Enterprise risk appetite, regulatory navigation, crisis management, audit committee relations, culture of compliance' }
+      ],
+      exec: [
+        { name: 'Managing Director / Partner (hedge fund, PE, VC)', salary: '$1M–$5M+ TC (highly variable)', skills: 'Investment track record, fundraising, LP relations, deal sourcing, portfolio construction, firm governance' },
+        { name: 'Chief Financial Officer (Fortune 500 / public)', salary: '$500K–$2M+ TC', skills: 'Strategic financial leadership, capital allocation at scale, investor messaging, transformation, board + CEO partnership' }
+      ]
+    },
+    companies: [
+      { name: 'JPMorgan Chase', hq: 'New York, NY', hint: 'Largest US bank by assets; reclaimed #1 on LinkedIn Top Companies 2026; broad IB, markets, tech, and operations hiring' },
+      { name: 'Goldman Sachs', hq: 'New York, NY', hint: 'Top-tier IB, trading, asset management, and Marcus; elite comp; selective but high-paying across front/middle/back office' },
+      { name: 'Morgan Stanley', hq: 'New York, NY', hint: 'Leading IB, wealth management (E*TRADE, Solo), and institutional securities; broad front-office and tech hiring' },
+      { name: 'Bank of America', hq: 'Charlotte, NC', hint: 'Second-largest US bank; broad IB, consumer banking, Merrill, and technology roles across the US' },
+      { name: 'Citadel', hq: 'Miami, FL (global HQ); new London campus', hint: 'Top hedge fund + market maker (Citadel Securities); quant + tech roles; $758K+ avg hedge fund comp; new 90,000 sq ft London trading floor 2026' },
+      { name: 'Two Sigma', hq: 'New York, NY', hint: 'Quantitative investment firm; data science, ML, and software engineering at scale; strong data/tech profile' },
+      { name: 'Renaissance Technologies', hq: 'East Setauket, NY', hint: 'Elite quant fund (Medallion); extremely selective; math/stats/CS PhDs; world-class comp' },
+      { name: 'BlackRock', hq: 'New York, NY (HQ); Princeton, NJ (Aladdin tech hub)', hint: 'World\'s largest asset manager (~$10T AUM); Aladdin technology platform; broad investment, tech, and ops roles' },
+      { name: 'Vanguard', hq: 'Malvern, PA', hint: 'Largest mutual fund/ETF provider; client service, investment, and technology roles; stable, high-volume hiring' },
+      { name: 'Wells Fargo', hq: 'San Francisco, CA (historical HQ); Charlotte, NC', hint: 'Major US bank; broad consumer, commercial, and corporate roles across the US' },
+      { name: 'Fidelity Investments', hq: 'Boston, MA', hint: 'Leading asset manager and brokerage; broad investment, tech, client-facing, and operations roles' },
+      { name: 'State Street', hq: 'Boston, MA', hint: 'Global custodian bank and asset servicer (~$40T AUA); SPOC tech hub; broad operations, technology, and investment roles' },
+      { name: 'Charles Schwab', hq: 'Westlake, TX (moved from San Francisco)', hint: 'Largest US brokerage by client assets; broad retail brokerage, advisor services, and technology roles' },
+      { name: 'Deloitte (Risk & Financial Advisory)', hq: 'New York, NY', hint: 'Big 4 risk, regulatory, and financial advisory practice; broad consulting, audit, and advisory roles; AI-in-audit push' },
+      { name: 'PwC (Assurance / Transactions)', hq: 'New York, NY', hint: 'Big 4 assurance, tax, and transactions practice; broad audit, valuation, M&A advisory, and technology consulting roles' },
+      { name: 'EY', hq: 'New York, NY', hint: 'Big 4 assurance, tax, and consulting; broad audit, advisory, and technology consulting roles; AI/emerging tech focus' },
+      { name: 'KPMG', hq: 'New York, NY', hint: 'Big 4 audit, tax, and advisory; broad audit, advisory, and financial consulting roles across US practices' },
+      { name: 'Accenture (Finance & Procurement)', hq: 'Chicago, IL / New York, NY', hint: 'Global consulting and technology services; finance transformation, procurement, and ERP implementation roles' },
+      { name: 'Milliman', hq: 'Seattle, WA / New York, NY', hint: 'Independent actuarial and analytics firm; actuarial, consulting, and data science roles; strong benefit/risk advisory' },
+      { name: 'Marsh McLennan', hq: 'New York, NY', hint: 'Global insurance brokerage and consulting (Marsh, Guy Carpenter, Mercer, Oliver Wyman); broad risk, brokerage, and consulting roles' },
+      { name: 'Aon', hq: 'London, UK (major US operations)', hint: 'Global professional services firm (reinsurance, risk, HR consulting, wealth); broad risk advisory and brokerage roles' },
+      { name: 'Willis Towers Watson (WTW)', hq: 'London, UK (major US operations)', hint: 'Global risk, insurance, and human capital consulting; broad advisory and brokerage roles in the US' },
+      { name: 'NFLX (fintech payments)', hq: 'San Francisco, CA (Stripe-related entity)', hint: 'Payment infrastructure and fintech; backend engineering, payments, and enterprise API roles; out-hired Big Tech in 2026 engineering growth' },
+      { name: 'Stripe', hq: 'San Francisco, CA', hint: 'Payment infrastructure platform; out-hired Big Tech in 2026 on engineering hiring growth; strong backend, payments, and enterprise API engineering' },
+      { name: 'PayPal', hq: 'San Jose, CA', hint: 'Digital payments leader; broad engineering, product, risk, and corporate roles' },
+      { name: 'Plaid', hq: 'San Francisco, CA', hint: 'Financial data connectivity network; backend, data, and product engineering roles; fintech infrastructure' },
+      { name: 'Robinhood', hq: 'Menlo Park, CA / Salt Lake City, UT', hint: 'Retail investing and crypto platform; broad engineering, product, compliance, and operations roles' },
+      { name: 'SoFi', hq: 'New York, NY / San Francisco, CA', hint: 'Consumer fintech (lending, investing, banking); broad lending, tech, and product roles' },
+      { name: 'Lemonade', hq: 'New York, NY', hint: 'AI-driven insurance startup; broad engineering, product, data, and insurance operations roles' },
+      { name: 'Progressive', hq: 'Mayfield Village, OH', hint: 'Major auto and property insurer; broad underwriting, data science, actuarial, and corporate roles' },
+      { name: 'Chubb', hq: 'Zurich, Switzerland (major US operations)', hint: 'Global insurance and reinsurance; broad underwriting, risk, actuarial, and corporate roles' },
+      { name: 'MetLife', hq: 'New York, NY', hint: 'Major global insurance and employee benefits; broad actuarial, underwriting, investment, and corporate roles' },
+      { name: 'Prudential Financial', hq: 'Newark, NJ', hint: 'Major insurance and retirement services; broad actuarial, investment management, and corporate roles' }
+    ]
+  },
+  {
+    id: 'manufacturing',
+    name: 'Manufacturing, Industrial & Skilled Trades',
+    tagline: 'Engineering, Operations, Skilled Trades, Supply Chain, Quality',
+    openRoles: '~19,000 mfg + significant trades volume',
+    companies: 293,
+    growth: 'Construction & Real Estate NEO highest at 55% (Manpower Q3 2026); mfg stabilized; skilled trades replacement hiring steady',
+    desc: 'Manufacturing and industrial hiring is steady rather than booming, with infrastructure spending, reshoring, and semiconductor/electronics investment supporting demand. The real standout is skilled trades — electricians, HVAC, welding, construction trades — where replacement hiring and consistent demand create durable, well-paying careers less exposed to automation. Engineering management bridges trades and professional tracks.',
+    tags: ['Manufacturing','Skilled Trades','Engineering','Supply Chain','Quality','Operations'],
+    color: '#fbbf24',
+    roles: {
+      fresher: [
+        { name: 'Manufacturing Engineer / Process Engineer (new grad)', salary: '$65K–$85K', skills: 'Mechanical/industrial/chE degree, CAD, Lean/Six Sigma basics, process knowledge, data analysis, communication' },
+        { name: 'Supply Chain / Logistics Analyst (entry)', salary: '$55K–$75K', skills: 'Excel, ERP systems (SAP/Oracle), SQL (increasingly), data analysis, supply chain fundamentals, communication' },
+        { name: 'Quality Engineer / Technician (entry)', salary: '$55K–$75K', skills: 'Six Sigma (Yellow/Green Belt), SPC, root-cause analysis, inspection methods, documentation, lean tools' },
+        { name: 'Skilled Trade Apprentice (electrician, HVAC, welder, plumber)', salary: '$40K–$60K (apprentice) → $60K–$90K+ journeyman', skills: 'Trade school or apprenticeship, OSHA safety, tool proficiency, code knowledge, mentorship from journeyman' }
+      ],
+      early: [
+        { name: 'Manufacturing / Industrial Engineer (2–5 yr)', salary: '$80K–$110K', skills: 'Process optimization, Lean/Kaizen, time studies, ERP, FMEA, cross-functional problem-solving, project leadership' },
+        { name: 'Supply Chain Analyst → Planner', salary: '$70K–$95K', skills: 'Demand planning, inventory management, SAP/APS, data analysis, supplier coordination, Excel/SQL/Python' },
+        { name: 'Skilled Tradesperson (journeyman level)', salary: '$65K–$100K+ (electrician/HVAC/welder)', skills: 'Completed apprenticeship, license/certification, code mastery, troubleshooting, client interaction, safety culture' },
+        { name: 'Quality Engineer (specialist)', salary: '$75K–$100K', skills: 'Advanced Six Sigma (Green/Black Belt), audit, CAPA, ISO standards, root-cause, customer quality liaison' }
+      ],
+      mid: [
+        { name: 'Senior Manufacturing / Industrial Engineer', salary: '$110K–$150K', skills: 'Multi-line/plant optimization, capital planning, advanced Lean/Six Sigma Black Belt, automation/robotics integration, team leadership' },
+        { name: 'Supply Chain Manager / Operations Planner (senior)', salary: '$100K–$140K', skills: 'Network design, supplier strategy, inventory optimization, cross-functional leadership, data-driven decision-making, ERP at scale' },
+        { name: 'Production / Plant Supervisor → Manager', salary: '$90K–$130K', skills: 'Shift management, safety (OSHA), scheduling, KPI dashboards, union/labor relations, continuous improvement' },
+        { name: 'Skilled Trades Master / Lead / Foreman', salary: '$90K–$130K+', skills: 'Journeyman + years, lead/supervise crews, estimate/quote, client mgmt, complex troubleshooting, mentoring apprentices' }
+      ],
+      senior: [
+        { name: 'Plant Manager / Facility Director', salary: '$130K–$200K+', skills: 'P&L or full plant ownership, safety/quality/output accountability, capital investment, workforce planning, community/regulatory relations' },
+        { name: 'Director of Manufacturing / Operations', salary: '$160K–$240K', skills: 'Multi-plant oversight, strategy, capital allocation, continuous improvement culture, talent pipeline, customer/ops alignment' },
+        { name: 'Senior Supply Chain / Logistics Director', salary: '$140K–$220K', skills: 'Network strategy, global logistics, supplier diversification, risk/resilience, automation/AI in supply chain, board-level visibility' }
+      ],
+      exec: [
+        { name: 'VP of Manufacturing / COO (industrial company)', salary: '$250K–$500K+ TC', skills: 'Enterprise operations strategy, margin accountability, capital allocation, transformation/lean-at-scale, M&A integration, board partnership' },
+        { name: 'Chief Supply Chain Officer / VP Supply Chain', salary: '$200K–$350K+', skills: 'End-to-end supply chain strategy, resilience, sustainability, technology adoption (AI/IoT), global vendor ecosystem, C-suite influence' }
+      ]
+    },
+    companies: [
+      { name: 'RTX Corp (Raytheon Technologies)', hq: 'Arlington, VA', hint: '12,871 global openings — #1 US employer by posting volume; Collins Aerospace + Pratt & Whitney driving skilled mfg demand' },
+      { name: 'Lockheed Martin', hq: 'Bethesda, MD', hint: '10,614 open postings — largest YoY increase among all US employers; defense, space, advanced manufacturing' },
+      { name: 'Boeing', hq: 'Arlington, VA', hint: '100–140 factory workers/week — highest rate since 2024; 737 MAX + 777X ramp; 34,000+ unionized workers in PNW; massive apprenticeship programs' },
+      { name: 'Tesla', hq: 'Austin, TX', hint: 'Terafab chip fab moonshot (with SpaceX); Megafactory near Houston hiring; multiple 2026 pushes across TX & CA' },
+      { name: 'Caterpillar', hq: 'Irving, TX', hint: '600 new production jobs at Sanford, NC plant alone (May 2026); world\'s largest construction/mining equipment mfg' },
+      { name: 'SpaceX', hq: 'Hawthorne, CA / Starbase, TX', hint: '60+ open roles in Silicon division; thousands of applicants per entry-level role; preparing for IPO; scaling Starlink in-house' },
+      { name: 'GE Vernova', hq: 'Boston, MA', hint: 'Spun off from GE; leading energy tech; massive renewables + grid modernization hiring; power conversion, turbine tech, field service' },
+      { name: 'John Deere', hq: 'Moline, IL', hint: 'Ag & construction equipment manufacturer; active pipefitting, HVAC, maintenance roles across US plants' },
+      { name: 'Stellantis (US operations)', hq: 'Auburn Hills, MI', hint: 'Jeep/Chrysler/Ram/Dodge; large US mfg footprint; floor hiring continues despite 20,000+ salaried reductions across Detroit automakers' }
+    ]},
+  {
+    id: 'energy',
+    name: 'Energy, Utilities & Renewables',
+    tagline: 'Oil & Gas, Electric Utilities, Solar/Wind, Grid, Nuclear, Energy Transition',
+    openRoles: '~4,300 utilities + significant renewables growth',
+    companies: 89,
+    growth: 'Renewables fastest-growing industries (solar + wind + geothermal); utilities steady; energy transition driving skilled demand',
+    desc: 'The BLS identifies renewable energy generation as tied for the fastest-growing detailed industries. Solar PV installers (+37%), wind turbine techs (+30%), and grid/utilities roles are expanding alongside the energy transition. Oil & gas remains a high-pay sector (especially engineering and trades), while electric utilities and nuclear offer stable, well-benefited careers. Grid modernization and storage are creating new technical and project management roles.',
+    tags: ['Oil & Gas','Utilities','Solar/Wind','Grid','Nuclear','Storage'],
+    color: '#22d3ee',
+    roles: {
+      fresher: [
+        { name: 'Electrical / Mechanical Engineer (energy — new grad)', salary: '$70K–$90K', skills: 'Power systems, thermodynamics, CAD, PLC basics, project fundamentals, EIT certification path' },
+        { name: 'Solar PV Installer / Wind Tech (entry)', salary: '$45K–$60K entry → $55K–$75K+ experienced', skills: 'Trade training/certification (NABCEP for solar), OSHA, electrical fundamentals, heights/climbing (wind), safety culture' },
+        { name: 'Grid Operations / Substation Technician (entry)', salary: '$55K–$75K', skills: 'Electrical fundamentals, protective relaying basics, safety protocols, shift work tolerance, vendor-specific training' },
+        { name: 'Nuclear Engineer / Operator Trainee', salary: '$75K–$95K (enter as trainee/operator)', skills: 'Nuclear engineering degree or military nuclear experience, NRC licensure path, radiation safety, procedures discipline' }
+      ],
+      early: [
+        { name: 'Field Engineer / Operations Engineer (O&G or utilities)', salary: '$85K–$120K', skills: 'Well/site operations, production optimization, data monitoring, HSE, regulatory compliance, field communication' },
+        { name: 'Solar Project Developer / Project Coordinator', salary: '$70K–$100K', skills: 'Site assessment, permitting, interconnection, PPA basics, stakeholder mgmt, project timeline/budget tracking' },
+        { name: 'Utility Planner / Distribution Engineer', salary: '$80K–$110K', skills: 'Load forecasting, grid planning, standards (IEEE/NERC), GIS, modeling, stakeholder coordination' },
+        { name: 'Energy Trading / Analyst (early — merchant/utility)', salary: '$80K–$130K base + bonus', skills: 'Markets knowledge, pricing models, risk, Excel/Python, real-time decision-making, regulation (ISO/RTO markets)' }
+      ],
+      mid: [
+        { name: 'Senior Project Manager — Renewable Energy / Grid', salary: '$120K–$180K', skills: 'Full project lifecycle, permitting/interconnection, EPC coordination, budget/schedule at scale, stakeholder mgmt, contract mgmt' },
+        { name: 'Senior Engineer — Power Systems / Grid / Plant', salary: '$120K–$170K', skills: 'System design, reliability, protection/control, substation/transmission expertise, standards mastery, mentoring' },
+        { name: 'EHS / Safety Manager (energy/industrial)', salary: '$100K–$140K', skills: 'OSHA/MSHA/NRC regulations, safety culture, incident investigation, audits, training, risk assessment, leadership' },
+        { name: 'Energy Trader / Portfolio Manager (mid)', salary: '$150K–$300K+ TC', skills: 'Market fundamentals, quantitative analysis, risk management, position management, P&L ownership, team leadership' }
+      ],
+      senior: [
+        { name: 'Operations Director / Plant Manager (power/utility)', salary: '$160K–$250K+', skills: 'Multi-unit operations, reliability/availability, regulatory compliance, workforce, capital planning, community/regulatory relations' },
+        { name: 'Director of Renewable Development / Grid Planning', salary: '$150K–$230K', skills: 'Portfolio strategy, large-scale project pipeline, regulatory/policy navigation, capital allocation, partnership/land strategy' }
+      ],
+      exec: [
+        { name: 'VP Operations / COO (utility or energy company)', salary: '$250K–$500K+ TC', skills: 'Enterprise operations, regulatory strategy, capital investment, reliability/safety culture, stakeholder/government relations, transformation' },
+        { name: 'Chief Commercial Officer / VP Energy Trading & Marketing', salary: '$250K–$600K+ TC', skills: 'Commercial strategy, market positioning, risk framework, P&L accountability, trading/hedging leadership, regulatory navigation' }
+      ]
+    },
+    companies: [
+      { name: 'NextEra Energy', hq: 'Juno Beach, FL', hint: 'World\'s largest wind/solar generator; merging with Dominion Energy (May 2026) to create world\'s largest regulated electric utility; massive clean energy hiring surge' },
+      { name: 'Dominion Energy', hq: 'Richmond, VA', hint: 'Major electric & gas utility; combining with NextEra in landmark $67B deal; active hiring across transmission, distribution, renewables' },
+      { name: 'GE Vernova', hq: 'Boston, MA', hint: 'Spun off from GE; leading global energy tech; key driver of grid modernization + renewable project hiring; power conversion, turbine tech, field service' },
+      { name: 'Tesla Energy', hq: 'Austin, TX', hint: 'Musk\'s 100 GW US solar manufacturing goal by 2028; massive hiring ramp for engineering + manufacturing scale-up; solar + battery storage' },
+      { name: 'AES Corporation', hq: 'Arlington, VA', hint: 'Global power company focused on renewables + energy storage; named one of world\'s best workplaces; expanding US renewable portfolio' },
+      { name: 'Ørsted', hq: 'Houston, TX (US ops)', hint: 'Global offshore wind leader; 42+ open US roles; major US East Coast wind farm projects; marine operations + engineering' },
+      { name: 'EDP Renewables North America', hq: 'Houston, TX', hint: 'Develops, constructs, owns, operates wind farms + solar parks across North America; active intern + asset manager hiring' },
+      { name: 'Hanwha Renewables', hq: 'Irvine, CA', hint: 'Hanwha Group (Fortune Global 500) subsidiary; designs, builds, manages utility-scale solar PV + battery storage across North America' }
+    ]},
+  {
+    id: 'construction',
+    name: 'Construction & Real Estate',
+    tagline: 'General/Specialty Contracting, Development, RE Services, Engineering, Project Mgmt',
+    openRoles: '~15,600 construction + RE roles',
+    companies: 407,
+    growth: 'Construction & Real Estate NEO highest at 55% (Manpower Q3 2026); infrastructure spending supports hiring; skilled trades shortage',
+    desc: 'Construction & Real Estate posted the highest Net Employment Outlook of any sector for Q3 2026 (55%, ManpowerGroup). Infrastructure investment (IIJA, CHIPS Act indirect), reshoring, and housing demand support steady hiring. The sector spans skilled trades (high demand, good pay, apprenticeship path), project/construction management, engineering, real estate services, and development. Trades provide some of the best non-degree career paths in the economy.',
+    tags: ['Construction','Trades','Project Mgmt','Development','RE Services','Engineering'],
+    color: '#a78bfa',
+    roles: {
+      fresher: [
+        { name: 'Construction Project Engineer / Assistant PM (new grad)', salary: '$60K–$80K', skills: 'Civil/construction mgmt degree, Blueprint reading, CAD/BIM, scheduling (MS Project/Primavera), estimating basics, field communication' },
+        { name: 'Real Estate Analyst / Associate (entry)', salary: '$65K–$90K', skills: 'Financial modeling (DCF, comps, cap rates), market research, Excel, Argus, presentation, due diligence' },
+        { name: 'Skilled Trade Apprentice (carpentry, electrical, plumbing, concrete, ironwork)', salary: '$40K–$60K apprentice → $60K–$100K+ journeyman', skills: 'Apprenticeship program or trade school, OSHA 10/30, tool proficiency, code awareness, mentorship' },
+        { name: 'Land Surveyor / Survey Technician (entry)', salary: '$45K–$65K', skills: 'GPS/total station, CAD, field engineering, data collection, geomatics fundamentals' }
+      ],
+      early: [
+        { name: 'Project Manager / Assistant Superintendent (construction)', salary: '$80K–$120K', skills: 'Schedule management, subcontractor coordination, budget tracking, change orders, RFIs/submittals, field leadership, safety (OSHA)' },
+        { name: 'Commercial Real Estate Agent / Broker (early)', salary: '$60K–$120K (base + commission)', skills: 'Licensing, market knowledge, client prospecting, deal negotiation, marketing, networking, CRM' },
+        { name: 'Cost Estimator / Quantity Surveyor', salary: '$70K–$100K', skills: 'Takeoff software (Bluebeam, Planswift), cost databases, spreadsheet mastery, subcontractor pricing, historical data analysis' },
+        { name: 'Civil / Structural Engineer (2–5 yr)', salary: '$75K–$105K', skills: 'CAD/BIM (AutoCAD, Revit), analysis (SAP2000, RISA), code knowledge (IBC, ACI, AISC), design coordination, PE track' }
+      ],
+      mid: [
+        { name: 'Senior Project Manager / Superintendent (construction)', salary: '$110K–$170K', skills: 'Large-project leadership, budget/schedule at scale, risk management, dispute resolution, client/architect/owner relations, safety culture' },
+        { name: 'Development Manager / Acquisition Manager (real estate)', salary: '$120K–$180K + bonus/equity', skills: 'Deal sourcing, underwriting, entitlements, capital stack, investor relations, zoning/policy, project delivery' },
+        { name: 'Construction / Forward Engineer (senior)', salary: '$100K–$140K', skills: 'Complex design, design coordination, constructability review, field problem-solving, BIM/VDC, mentoring junior engineers' },
+        { name: 'Brokerage Team Lead / Senior Agent (RE)', salary: '$150K–$300K+ (century-plus production)', skills: 'Luxury/commercial deal flow, client portfolio, referral network, team building, market authority, negotiation mastery' }
+      ],
+      senior: [
+        { name: 'Director of Construction / Regional Superintendent', salary: '$150K–$240K', skills: 'Multi-project oversight, resource allocation, executive client relationship, safety/quality standards, P&L awareness, talent development' },
+        { name: 'VP of Development / Principal (real estate firm)', salary: '$200K–$400K+ TC', skills: 'Investment strategy, portfolio construction, capital markets, entitlements/zoning strategy, board/investor reporting, deal leadership' }
+      ],
+      exec: [
+        { name: 'Chief Operating Officer / President (contractor or developer)', salary: '$300K–$700K+ TC', skills: 'Enterprise strategy, operations excellence, safety culture, financial discipline, M&A, client/government relations, market expansion' },
+        { name: 'Partner / Principal (major brokerage or developer)', salary: '$500K–$2M+ (highly variable, deal-driven)', skills: 'Market-defining deal flow, brand/reputation, capital relationships, team leadership, market cycle judgment, legacy building' }
+      ]
+    },
+    companies: [
+      { name: 'D.R. Horton', hq: 'Richardson, TX', hint: 'Largest US homebuilder by volume; 11,788 employees; consistent construction, sales, corporate roles across TX, FL, AZ, CA' },
+      { name: 'Lennar', hq: 'Sunnyvale, CA', hint: 'Leading homebuilder; strong Sun Belt presence; active construction, sales, corporate hiring' },
+      { name: 'PulteGroup', hq: 'Atlanta, GA', hint: 'Major homebuilder with multiple brands (Pulte Homes, Centex, Del Webb, Milestone); strong Sun Belt presence; active hiring' },
+      { name: 'Bechtel', hq: 'Reston, VA', hint: 'Global EPC giant; megaprojects, infrastructure, energy; active hiring of engineers, PMs, supervisors, skilled craft' },
+      { name: 'Turner Construction', hq: 'New York, NY', hint: 'One of the largest US construction management firms; commercial, healthcare, institutional projects; diverse career paths' },
+      { name: 'Prologis', hq: 'The Woodlands, TX', hint: 'World\'s largest owner/operator of logistics real estate; dominant in industrial warehouse properties; active hiring' },
+      { name: 'CBRE Group', hq: 'Dallas, TX', hint: 'Global leader in commercial real estate services & investment; one of largest CRE employers; brokerage, property mgmt, corporate roles' },
+      { name: 'The Home Depot', hq: 'Atlanta, GA', hint: 'World\'s largest home improvement retailer; 2,300+ stores; 130,000+ workers planned combined with Lowe\'s (Feb 2026); retail, supply chain, PRO hiring' },
+      { name: 'Lowe\'s', hq: 'Mooresville, NC', hint: 'Second-largest home improvement retailer; $86B+ sales; services project coordinator + installation roles growing; combined 130,000+ hiring with Home Depot' }
+    ]},
+  {
+    id: 'consulting_sales',
+    name: 'Consulting, Professional Services & Enterprise Sales',
+    tagline: 'Management Consulting, Tech Consulting, SaaS Sales, Solutions Engineering, Account Executive',
+    openRoles: '~9,500 consulting + significant SaaS sales volume',
+    companies: 231,
+    growth: 'Professional/Scientific/Tech Services +7.5% (BLS); AI consulting surging; SaaS sales compensation strong across all levels',
+    desc: 'Management and technology consulting continue to grow, driven partly by AI implementation advisory demand (BLS notes IT consulting for AI adoption is a growth driver). Enterprise SaaS sales and solutions engineering offer some of the highest total compensation outside of finance and top tech — base + uncapped commission + equity. The path is skills-driven: consultancies value problem-solving, frameworks, and client communication; SaaS sales values pipeline generation, technical fluency, and closing.',
+    tags: ['Consulting','Strategy','Tech Consulting','SaaS Sales','Solutions Eng','Account Exec'],
+    color: '#f87171',
+    roles: {
+      fresher: [
+        { name: 'Business Analyst / Associate Consultant (MBB / Big 4 / boutique)', salary: '$70K–$95K base + bonus', skills: 'Problem-solving frameworks, Excel/PowerPoint, data analysis, client communication, structured thinking, case interview prep' },
+        { name: 'Sales Development Representative (SDR / BDR) — SaaS', salary: '$65K–$90K OTE', skills: 'Prospecting, cold outreach, qualification, CRM (Salesforce), pipeline basics, resilience, communication, product curiosity' },
+        { name: 'Solutions Engineer / Pre-Sales Associate (early)', salary: '$90K–$130K OTE', skills: 'Technical depth (one stack), demo skills, RFP/technical evaluation, customer-facing communication, understanding of business value' },
+        { name: 'Technology Consultant / Analyst (Big 4 / tech consulting)', salary: '$70K–$95K', skills: 'One technical domain (cloud, data, security, ERP), client communication, project support, certifications (AWS/Azure/ITIL) helpful' }
+      ],
+      early: [
+        { name: 'Consultant / Senior Consultant (post-2–3 yr)', salary: '$110K–$160K total', skills: 'Team leadership, client relationship, deeper domain expertise, project management, thought leadership, presentation' },
+        { name: 'Account Executive / Sales Rep (SaaS — mid-market/enterprise)', salary: '$150K–$280K+ OTE', skills: 'Full-cycle selling, discovery, demo/POC, negotiation, CRM mastery, multi-threading, industry/technical fluency, quota discipline' },
+        { name: 'Solutions Engineer / Pre-Sales Engineer (mid)', salary: '$140K–$220K OTE', skills: 'Deep technical knowledge, complex demos, architecture-level discussions, PoC leadership, competitive differentiation, sales partnership' },
+        { name: 'Account Manager / Customer Success Manager (mid)', salary: '$90K–$140K base + bonus/equity', skills: 'Relationship management, renewal/expansion, QBRs, product expertise, escalation handling, metrics-driven retention' }
+      ],
+      mid: [
+        { name: 'Engagement Manager / Project Leader (consulting)', salary: '$150K–$220K total', skills: 'C-suite interaction, proposal/auth work, team development, delivery excellence, business development support, industry specialization' },
+        { name: 'Senior Account Executive (Enterprise SaaS)', salary: '$250K–$450K+ OTE', skills: 'Strategic account planning, C-level selling, complex evaluation cycles, competitive displacement, partner ecosystem, coaching junior reps' },
+        { name: 'Director of Sales / Sales Leader (mid-size SaaS)', salary: '$180K–$280K base + commission + equity', skills: 'Team building/hiring, quota planning, forecast accuracy, process design, pipeline management, coaching, board/exec reporting' },
+        { name: 'Principal Consultant / Senior Manager (consulting)', salary: '$160K–$240K', skills: 'Practice development, marquee client relationships, IP/thought leadership, advanced methodologies, cross-practice collaboration' }
+      ],
+      senior: [
+        { name: 'Partner / Managing Director (consulting firm)', salary: '$300K–$700K+ TC (highly variable with originations)', skills: 'Book of business, C-suite relationships, firm strategy, practice building, recruiting, client trust at highest level, thought leadership' },
+        { name: 'VP of Sales / SVP Sales (SaaS)', salary: '$300K–$550K+ TC', skills: 'Multi-region/multi-segment sales org, strategy, comp plan design, hire/fire judgment, board-level pipeline reporting, market positioning' },
+        { name: 'Chief Revenue Officer / SVP Customer Success', salary: '$250K–$450K+', skills: 'End-to-end revenue strategy (sales + CS + renewals), data/analytics on funnel, cross-functional alignment (marketing/product), forecast integrity' }
+      ],
+      exec: [
+        { name: 'Senior Partner / Global Managing Partner (consulting)', salary: '$1M–$5M+ TC', skills: 'Firm-wide or global practice leadership, marquee global clients, M&A/partnerships, external brand, board/industry influence, talent magnet' },
+        { name: 'Chief Revenue Officer (enterprise SaaS)', salary: '$400K–$800K+ TC', skills: 'Total revenue accountability, go-to-market strategy, M&A/integration, board partnership, market expansion, sales tech/AI adoption at scale' }
+      ]
+    },
+    companies: [
+      { name: 'Snowflake', hq: 'Menlo Park, CA', hint: '414 open roles; 128 in sales/account mgmt (67 enterprise sales); ~50% of headcount into GTM — unusual ratio; strong sales engineering org; AI/ML analytics expansion' },
+      { name: 'AWS (Amazon Web Services)', hq: 'Seattle, WA', hint: '45 open sales roles — highest among tech/SaaS surveyed; senior AEs regularly exceed $300K OTE; complex 6–12 month enterprise deal cycles' },
+      { name: 'Salesforce', hq: 'San Francisco, CA', hint: 'CRM that every SaaS plugs into; 1,000 grad/intern hires for 2026; 110K OTE SDR, 320K OTE AE; large formal BDR/SDR programs; AI agent hiring' },
+      { name: 'ServiceNow', hq: 'San Diego, CA', hint: 'Enterprise workflow automation; digital transformation driver; enterprise AE roles with complex multi-stakeholder deals; strong security ops hiring' },
+      { name: 'Workday', hq: 'Pleasanton, CA', hint: 'Enterprise cloud HCM + finance platform; runs the ATS that 713,606+ job postings live on (63% of crawled postings); broad GTM hiring' },
+      { name: 'HubSpot', hq: 'Cambridge, MA', hint: 'All-in-one CRM, marketing, sales, service, CMS for SMB/mid-market; 95K OTE BDR, 240K OTE AE; strong inbound sales culture; growth-stage GTM hiring' },
+      { name: 'OpenAI', hq: 'San Francisco, CA', hint: '~20% of all open roles in sales, partnerships, revenue; ChatGPT + API platform; GTM is largest hiring category as revenue scales' },
+      { name: 'Anthropic', hq: 'San Francisco, CA', hint: 'Claude AI enterprise platform; $47B annualized revenue (80% enterprise); ~20% of roles in sales; "Palantirization of everything" — enterprise sales getting more technical' },
+      { name: 'Stripe', hq: 'San Francisco, CA', hint: 'Payment infrastructure platform; out-hired Big Tech in 2026 on engineering hiring growth; strong backend, payments, enterprise sales roles' },
+      { name: 'Shopify', hq: 'Ottawa, Canada (major US ops)', hint: 'E-commerce platform; notable 2026 hiring that outpaced Big Tech; merchant services, engineering, partnerships roles across US ops' }
+    ]},
+  {
+    id: 'retail',
+    name: 'Retail, Consumer & Hospitality',
+    tagline: 'Retail Ops, Merchandising, CPG, Restaurants, Hotels, Consumer Tech',
+    openRoles: '~62,500 retail/consumer',
+    companies: 371,
+    growth: 'Retail/hospitality postings ~7.4% below pre-pandemic (Indeed), but still massive volume; consumer spending supports steady hiring',
+    desc: 'Retail & consumer is the third-largest source of open roles by count (PursuitCI: 62,500). While postings have cooled from pandemic highs, the sector still employs millions and offers accessible entry points. High-paying tracks include retail operations leadership, merchandising/buying, supply chain, store/region management, and corporate roles at major consumer brands. Hospitality and food service offer quick entry and path to management. Many large employers have shifted to skills-first hiring.',
+    tags: ['Retail Ops','Merchandising','Supply Chain','Store Mgmt','Hospitality','CPG'],
+    color: '#fb923c',
+    roles: {
+      fresher: [
+        { name: 'Retail Sales Associate / Store Team Member', salary: '$14–$20/hr ($30K–$42K)', skills: 'Customer service, POS/transactions, product knowledge, teamwork, flexible scheduling; many roles no degree required' },
+        { name: 'Restaurant / Food Service Team Member', salary: '$15–$20/hr + tips', skills: 'Food safety, fast-paced service, teamwork, customer interaction; management track available' },
+        { name: 'Fulfillment / Warehouse Associate (e-commerce/3PL)', salary: '$17–$24/hr ($35K–$50K)', skills: 'Pick/pack, RF scanner, safety protocols, teamwork, physical stamina; Amazon/Walmart career paths available' },
+        { name: 'Consumer / Retail Analyst (entry — corporate)', salary: '$60K–$80K', skills: 'Excel, data analysis, consumer research, merchandising basics, trend awareness, presentation, retail math' }
+      ],
+      early: [
+        { name: 'Department Manager / Assistant Store Manager', salary: '$45K–$65K', skills: 'People management, scheduling, sales driving, customer escalation, inventory/receiving, P&L awareness, leadership' },
+        { name: 'Buyer / Merchandising Assistant → Assistant Buyer', salary: '$60K–$85K', skills: 'Product trend analysis, vendor relations, buying math (gross margin, sell-through), assortment planning, negotiation, data tools' },
+        { name: 'Supply Chain / Logistics Coordinator (retail/CPG)', salary: '$55K–$75K', skills: 'Inventory management, transportation basics, WMS/TMS, data analysis, supplier/vendor coordination, problem-solving' },
+        { name: 'Hotel / Hospitality Front Office Supervisor', salary: '$45K–$60K', skills: 'Guest services, PMS systems, shift coordination, problem resolution, revenue awareness, team leadership' }
+      ],
+      mid: [
+        { name: 'Store Manager / Multi-Unit Manager', salary: '$70K–$110K+', skills: 'Full P&L ownership, hiring/development, sales/ops/merchandising execution, shrink/loss prevention, community relations, customer experience' },
+        { name: 'Buyer / Merchandising Manager', salary: '$90K–$140K', skills: 'Category strategy, assortment planning, vendor negotiation, trend forecasting, analytics, cross-functional alignment (marketing/sourcing)' },
+        { name: 'Retail Operations Manager / District Manager', salary: '$85K–$130K+', skills: 'Multi-site P&L, people development, performance management, operational excellence, travel, coaching, KPI accountability' },
+        { name: 'Supply Chain / Distribution Manager (retail/CPG)', salary: '$90K–$130K', skills: 'Network/ DC operations, inventory optimization, carrier mgmt, WMS/TMS, labor mgmt, continuous improvement, vendor mgmt' },
+        { name: 'Revenue Manager / Director (hotels)', salary: '$80K–$130K', skills: 'Pricing strategy, demand forecasting, competitive set analysis, RMS tools, channel mgmt, market awareness, cross-dept coordination' }
+      ],
+      senior: [
+        { name: 'Regional Manager / VP Store Operations (retail)', salary: '$120K–$200K+', skills: 'Multi-region P&L, org design, talent pipeline, strategy execution, vendor/partner relations, turnaround, executive reporting' },
+        { name: 'Director of Merchandising / VP Merchandising', salary: '$140K–$250K+', skills: 'Category P&L, assortment strategy, vendor relationships, trend vision, analytics/forecasting, marketing alignment, brand building' },
+        { name: 'VP of Supply Chain / Distribution (retail/CPG)', salary: '$160K–$250K+', skills: 'Network strategy, capacity/throughput, cost optimization, supplier diversification, automation/technology, cross-functional leadership' }
+      ],
+      exec: [
+        { name: 'Chief Operating Officer / President (retail brand or chain)', salary: '$250K–$600K+ TC', skills: 'Enterprise ops strategy, margin accountability, supply chain, store/experience strategy, talent, M&A, brand vision, board partnership' },
+        { name: 'Chief Merchandising Officer / SVPCommerce', salary: '$250K–$500K+', skills: 'Portfolio strategy, brand vision, vendor ecosystem, trend authority, analytics at scale, cross-functional influence, market cycle judgment' }
+      ]
+    },
+    companies: [
+      { name: 'Walmart', hq: 'Bentonville, AR', hint: 'Largest US private employer (1.6M US employees); 2.1M globally; goal of 200,000 in-demand roles filled by end of 2026; skills-first hiring — 90%+ roles no degree required' },
+      { name: 'Amazon', hq: 'Seattle, WA', hint: 'Largest e-commerce + cloud logistics employer (1.1M US employees); 100,000+ seasonal surges; Amazon Logistics: 313+ open roles; embedding AI across products/operations' },
+      { name: 'Home Depot', hq: 'Atlanta, GA', hint: 'World\'s largest home improvement retailer; 2,300+ stores; 130,000+ workers planned combined with Lowe\'s (Feb 2026); retail, supply chain, PRO customers' },
+      { name: 'Lowe\'s', hq: 'Mooresville, NC', hint: 'Second-largest home improvement retailer; $86B+ fiscal 2025 sales; combined 130,000+ hiring with Home Depot; services + installation roles growing' },
+      { name: 'Costco Wholesale', hq: 'Issaquah, WA', hint: 'Employee-friendly warehouse club; new locations under construction driving proactive hiring 12 weeks before openings; consistent warehouse, retail, corporate roles' },
+      { name: 'TJX Companies', hq: 'Framingham, MA', hint: 'Off-price leader (TJ Maxx, Marshalls, HomeGoods, Winners); 1,846 new jobs added globally Aug 30, 2026; strong seasonal + store-level hiring' },
+      { name: 'Michaels', hq: 'Irving, TX', hint: 'Leading arts & crafts retailer; 1,300+ stores in 49 states; 10,000+ seasonal Team Member roles for holiday 2026; ~50% of seasonal converted to permanent last year' },
+      { name: 'WinCo Foods', hq: 'Boise, ID', hint: '2nd-largest employee-owned company in US; 22,000+ employee owners; 132+ active postings; growing chain across 10 western states with own distribution/transportation' },
+      { name: 'Burger King (Restaurant Brands Int\'l)', hq: 'Miami, FL', hint: 'Announced hiring up to 60,000 team members across US restaurants in 2026 — one of the largest QSR seasonal hiring pushes' },
+      { name: 'Darden Restaurants', hq: 'Orlando, FL', hint: 'Parent of Olive Garden, Red Lobster, LongHorn Steakhouse; one of the largest US restaurant companies; consistent hiring across franchises' },
+      { name: 'Sysco', hq: 'Houston, TX', hint: 'Largest US food distributor; broad warehouse, driver, sales, and corporate roles; essential supply chain employer' },
+      { name: 'U.S. Foods', hq: 'Rosemont, IL', hint: 'Major foodservice distributor; broad logistics, warehouse, sales, and corporate roles across the US' }
+    ]},
+  ];
+
+const switchGuides = [
+  {
+    id: 'sw-se',
+    title: 'Non-Tech → Software Engineer',
+    icon: '💻',
+    tags: ['SWE','bootcamp','portfolio','CS fundamentals','6–12 months'],
+    detail: {
+      timeline: '12–18 months (6–12 months intensive for adjacent roles like QA automation, front-end); 6–12 months part-time at 15–20 hrs/week. Entry-level SWE hiring is compressed by AI-assisted productivity; adjacent roles (QA, front-end, internal transfer) are faster paths. First role often $68K–$90K without a degree.',
+      key_skills: ['JavaScript or Python fundamentals — pick one and go deep.',
+       'React (most-hired framework in 2026); Node.js/Express for back-end alongside.',
+       'SQL and databases (PostgreSQL) — increasingly expected even for front-end roles.',
+       'Git/version control — non-negotiable for team work.',
+       'HTTP/REST APIs, authentication basics (JWT, sessions).',
+       'Data structures & algorithms (arrays, hash maps, Big-O) — for interviews, not daily work. LeetCode Easy (50+ problems).',
+       'System design basics for mid/senior: load balancing, caching, DB scaling, API design.',
+       'AI literacy: using LLM coding assistants effectively — now a baseline expectation in 2026. Knowing how to prompt, review, and integrate AI-generated code is a differentiator.'],
+      certs: ['Not required for most roles — portfolio > certs. Exceptions: some enterprise/contractor roles value AWS Cloud Practitioner, Oracle Java, or Microsoft cert.',
+       'If going cloud-heavy: AWS SAA / Azure Fundamentals → associate-level.',
+       'JavaScript Algorithms certification; relevant bootcamp certificate (optional; portfolio matters more).',
+       'Never treat course completion certificates (Udemy/Coursera/bootcamp) as substitutes for demonstrable project work — employers have learned to discount them.'],
+      portfolio: ['3–5 real projects, NOT tutorial clones: a full-stack app with auth + database, a data dashboard pulling a live API, a tool that solves a real problem.',
+       'One project leveraging previous domain expertise (e.g., finance→fintech, healthcare→healthtech).',
+       'Deploy everything: Vercel/Netlify/Railway/Render — a live link beats a GitHub repo alone.',
+       'Contribute to open source (even docs/PRs) — shows collaboration.',
+       'Document your thinking in READMEs: problem → approach → trade-offs → what you\'d improve next.',
+       'Break things on purpose: change code, see what breaks, figure out why — this builds the debugging intuition that tutorials don\'t teach.'],
+      entry_points: ['Junior frontend/React developer roles, QA automation, technical support with automation, internal transfers at current company (lower interview bar).',
+       'Associate PM and adjacent roles like business analyst also serve as stepping stones.',
+       'Junior SWE / front-end dev roles at mid-size companies and startups (FAANG-style onsites are harder for career changers early on).',
+       'Internal transfer: join a tech company in a non-tech role (support, ops, sales) and transfer to engineering — common and effective in 2026.',
+       'QA / manual tester → dev: a narrow but real bridge if you learn scripting + a framework.',
+       'Apply to 10+ high-quality roles/month, send 2 LinkedIn messages/week to people in target roles.',
+       'Median first-year comp: $70K–$110K USD; entry-level range $90K–$140K.',
+       'Confidence threshold: most career switchers wait too long. With 2–3 solid portfolio projects, professional tooling experience, and the ability to talk through your code, you are competitive for junior roles — even if you don\'t feel ready.'],
+      salary_progression: 'Entry $70K–$110K (first role often $68K–$90K without degree); mid-career $110K–$150K; senior $140K–$200K+. Software developers median $133,080 (BLS). Growth ~16% through 2034. Entry/Junior: $85K–$130K → Early (2–5yr): $130K–$200K → Mid/Senior: $170K–$280K → Staff/Principal: $250K–$450K+ TC. FAANG/LLM labs at the top end can exceed $400K–$600K at senior+ with equity; AI/ML premium 25–40% over general SWE at equivalent level. Note: Robert Half H2 2025 shows software engineer postings at ~149,400 — still the single largest tech role by volume.'
+    }
+  },
+  {
+    id: 'sw-data',
+    title: 'Non-Tech → Data Scientist / Analyst',
+    icon: '📊',
+    tags: ['SQL','Python','statistics','Tableau','6–12 months'],
+    detail: {
+      timeline: '4–6 months part-time (10–15 hrs/week) for data analyst; 7–10 months for data scientist from zero; 3–5 months intensive full-time. Entry-level data analyst market tougher in 2026.',
+      key_skills: ['SQL (required for 73–80% of postings; learn first and deepest).',
+       'Excel/Sheets (pivot tables, VLOOKUP/XLOOKUP).',
+       'One BI tool: Power BI (enterprise) or Tableau (product/MNC).',
+       'Python: pandas, NumPy, matplotlib/seaborn (optional for entry-level, needed for data science).',
+       'Statistics: descriptive stats, A/B testing, hypothesis testing, correlation vs causation.',
+       'Data cleaning and storytelling.',
+       'Git/GitHub for portfolio.'],
+      certs: ['Google Data Analytics Certificate (entry-level signal).',
+       'SQL certifications (Mode Analytics, SQLZoo completion).',
+       'Tableau Desktop Specialist / Microsoft Power BI certification.',
+       'Google Analytics / Mixpanel (for product analytics roles).',
+       'Azure/Microsoft Data Analyst for cloud data track.'],
+      portfolio: ['2–3 end-to-end projects on real, non-tutorial datasets (avoid Titanic/Iris/Boston Housing).',
+       'Domain-specific project combining previous industry knowledge (e.g., banking→financial analytics, ops→operational dashboards).',
+       'One SQL + Python capstone: pull data with SQL, clean/analyze in Python, visualize, end with recommendation.',
+       'Interactive dashboard with filters and drill-down.',
+       'Business-question-driven analysis with actionable recommendation, not just charts.'],
+      entry_points: ['Data Analyst, BI Analyst, Reporting Analyst, Junior Analytics Engineer.',
+       'Internal transfer within current company (3–6 months, leverage domain knowledge).',
+       'Finance/ops/marketing backgrounds have advantage.',
+       'Entry salary $65K–$75K (smaller companies), $75K–$90K mid, $90K–$119K tech hubs.',
+       'Data analyst median ~$84K–$90K. Data scientists median $112,590.'],
+      salary_progression: 'Entry $65K–$80K; mid $80K–$110K; senior $110K–$150K+; data scientist ceiling higher. Salaries rise significantly after 1–2 years experience. Can progress to data scientist, analytics engineer, or specialized domain roles. Data Analyst entry: $65K–$95K → Senior Analyst: $95K–$130K → Analytics Engineer: $130K–$170K → Data Scientist: $120K–$180K early, $170K–$250K+ senior (AI-focused higher). Top tech/ML-heavy: $250K+ TC at senior.'
+    }
+  },
+  {
+    id: 'sw-pm',
+    title: 'Non-Tech → Product Manager',
+    icon: '📋',
+    tags: ['PM','product sense','SQL','communication','3–9 months'],
+    detail: {
+      timeline: '6–12 months to first credible application; 12–18 months to land a role. MBA route: 2 years. APM programs: highly selective, early-career. Internal transfer often fastest path.',
+      key_skills: ['Product thinking and customer empathy (user research, personas, JTBD).',
+       'Prioritization frameworks (RICE, MoSCoW, OKRs).',
+       'Roadmapping and strategy.',
+       'SQL and data analytics fluency (metrics, A/B testing).',
+       'Agile/scrum workflows.',
+       'Written clarity: PRD, roadmap docs.',
+       'Stakeholder management and influence without authority.',
+       'AI product fluency (increasingly important in 2026).',
+       'Business acumen and structured thinking.'],
+      certs: ['AIPMM Certified Product Manager (CPM).',
+       'Pragmatic Institute certifications (B2B/enterprise).',
+       'PMP or PSM (for technical PM track).',
+       'Top MBA (M7 or top 15) for career switchers via MBA route.',
+       'Reforge (product/strategy) — strong signal for experienced PMs.'],
+      portfolio: ['Product research case study (user interviews, problem discovery).',
+       'Prioritized backlog and roadmap for a real or hypothetical product.',
+       'Metrics dashboard or analysis report with SQL.',
+       '1 specialization-aligned case study + 1 metrics framework + 1 interview story bank.',
+       'For technical PM: hands-on data or cloud project + delivery evidence.',
+       'Product teardowns: analyze an existing product\'s UX, metrics, and opportunities — publish as case studies.',
+       'Side projects where you act as PM: define problem, users, success metrics, build a MVP (or partner with a dev), measure.',
+       'Writing: blog posts on product decisions, strategy, or industry analysis — builds thought leadership.'],
+      entry_points: ['APM programs (selective, early-career); Associate PM at startups.',
+       'Internal transfer from adjacent roles (engineering, design, data, business); MBA route for career changers.',
+       'Boutique/startup PM roles. Entry-level PM salary $100K–$160K (APM at top companies).',
+       'US average ~$131K. Technical PM commands 15–25% premium over generalist PM.',
+       'LinkedIn lists 122,000+ openings in US.',
+       'Associate Product Manager (APM) programs at larger tech companies (application-heavy).',
+       'Bounce from adjacent roles: project manager, business analyst, data analyst, UX researcher, customer success, sales — many PMs transition internally.',
+       'Smaller companies / startups: broader scope, less process, easier to get the title and build experience.',
+       'Internal transfer within a company: move from a domain role (e.g., healthcare ops, finance analyst) to PM on a related product — powerful combo.'],
+      salary_progression: 'Entry $100K–$160K (US); mid $120K–$180K; senior $150K–$250K+; TPM ceiling higher. MBB PM roles post-MBA: $190K base + $30K signing. AI/ML specialization pushes mid-level from $120K to $180K+. ESOPs and bonuses common at startups. APM/Associate: $90K–$130K → Junior PM (2–4yr): $120K–$170K → Mid PM: $150K–$220K → Senior/Staff PM: $200K–$300K+ → Director/VP PM: $250K–$500K+ TC. AI/PM roles and enterprise SaaS at the higher end.'
+    }
+  },
+  {
+    id: 'sw-design',
+    title: 'Non-Tech → UX/UI Design',
+    icon: '🎨',
+    tags: ['UX','UI','Figma','portfolio','case studies','3–9 months'],
+    detail: {
+      timeline: '6–12 months for portfolio building; 9–18 months to land first role. Entry-level positions remain scarce and highly competitive in 2026; generalist/mid-senior roles recovering faster.',
+      key_skills: ['Figma (mastery including advanced features, auto-layout, components, variables).',
+       'UI fundamentals: typography, color, layout, visual hierarchy.',
+       'UX fundamentals: user research, information architecture, interaction design, usability testing.',
+       'Design systems and component libraries.',
+       'Wireframing and prototyping.',
+       'Business/design connection: understanding metrics, ROI of design decisions.',
+       'AI-augmented design tools (emerging expectations in 2026).',
+       'Portfolio storytelling and case study writing.'],
+      certs: ['No mandatory certifications; portfolio is the primary signal.',
+       'Figma courses (official, community), Google UX Design Certificate (optional).',
+       'Specialized UX bootcamps (e.g., FastTrack UX - official Figma partner).',
+       'Accessibility certifications (IAAP CPACC/WAS) can differentiate for enterprise/finance/healthcare roles.'],
+      portfolio: ['3–5 strong case studies showing full design process (research → ideation → wireframes → high-fidelity → testing → iteration).',
+       'Real client project or volunteer work (not concept redesigns alone).',
+       'Mini-agency or AI-powered design business to generate real paid client work.',
+       'Portfolio website built with Framer or similar (shows execution capability).',
+       'Trace great products daily in high fidelity to build UI instincts.',
+       'One project using AI-assisted workflow to demonstrate modern practice.',
+       '3–5 detailed case studies: problem → research → ideation → design → testing → outcome → reflection.',
+       'Real or realistic problems: redesign an app you use, design for a local business, a conceptual project with user research.',
+       'Show process, not just polished screens: early sketches, iterations, trade-offs, what you learned.',
+       'For UI-focused: a visual design portfolio (layout, type, color, components) alongside case studies.',
+       'Published portfolio site — not just a PDF. Figma links + a simple personal site.'],
+      entry_points: ['Junior UX/UI designer at agencies, startups, or mid-size companies; freelance/contract to build experience.',
+       'Internal transfer from adjacent roles (marketing, frontend, research); design apprenticeship programs.',
+       'Junior UX/UI Designer, Product Designer I, UX Researcher I roles at mid-size companies and startups.',
+       'Visual/UI designer roles can be more accessible than full-stack UX initially.',
+       'Adjacent transition: graphic designer, content designer, front-end dev, customer support → UX with upskilling.',
+       'Freelance/contract projects to build real client experience and references.',
+       'Entry salary ~$80K–$130K (portfolio-dependent).',
+       'Robert Half 2026: early career ~$96,500. Glassdoor avg total pay ~$100,913, base ~$81,224.',
+       'Market: stronger portfolio and referrals needed; generalists recovering faster than entry-level.'],
+      salary_progression: 'Entry $70K–$96K; mid $96K–$130K; senior $130K–$180K+; lead/principal $160K–$220K+. Varies heavily by company size, location, and portfolio strength. Agency vs in-house differences significant. Junior Designer: $70K–$100K → Mid UX/UI Designer: $100K–$140K → Senior Product Designer: $130K–$180K → Staff/Principal Designer: $160K–$220K+ → Design Director/VP Design: $200K–$350K+ TC. Top tech and AI-native product teams pay toward the high end.'
+    }
+  },
+  {
+    id: 'sw-cloud',
+    title: 'Non-Tech → Cloud / DevOps Engineer',
+    icon: '☁️',
+    tags: ['AWS','Azure','Terraform','K8s','CI/CD','certs','6–12 months'],
+    detail: {
+      timeline: '12+ months from non-tech (6–12 months from IT/support background). Budget 12–18 months part-time at 15–20 hrs/week. DevOps is almost never a first job; transition from dev, sysadmin, or cloud engineer first. QA-to-DevOps: 4–6 months. Support/NOC-to-DevOps: natural fit.',
+      key_skills: ['Linux and command line.',
+       'Networking fundamentals (VPCs, subnets, DNS, firewalls).',
+       'One cloud platform deep (AWS, Azure, or GCP): compute, storage, databases, networking, IAM.',
+       'Infrastructure as Code: Terraform (industry standard), CloudFormation/Bicep.',
+       'CI/CD: GitHub Actions or GitLab CI.',
+       'Docker and Kubernetes (K8s fluency near non-negotiable).',
+       'Scripting: Python, Bash, Go (more YAML/HCL than Python early on).',
+       'Observability: Prometheus, Grafana, OpenTelemetry, Loki.',
+       'Git and version control.'],
+      certs: ['CKA (Certified Kubernetes Administrator) — $445, highest signal.',
+       'HashiCorp Terraform Associate (004) — $70.50, high value/cost ratio.',
+       'AWS Solutions Architect Associate (SAA-C03) — $150.',
+       'Google Cloud Professional DevOps Engineer — $200.',
+       'Microsoft AZ-104 (Azure Admin) for Azure track.'],
+      portfolio: ['3-environment (dev/staging/prod) VPC and app stack on chosen cloud, deployed via Terraform.',
+       'GitHub Actions pipeline with test, build, security scan, deploy stages.',
+       'Prometheus + Grafana + Loki observability stack with 3 SLOs and error budgets.',
+       '3–5 substantial GitHub repos (beats any cert).',
+       'Home lab with Security Onion, vulnerable machines, documented write-ups.'],
+      entry_points: ['Not directly from non-tech typically. Best path: IT support/help desk → cloud ops → DevOps; QA/test automation → DevOps; sysadmin → cloud engineer → DevOps.',
+       'First role often hybrid (support-with-automation, cloud operations, junior DevOps).',
+       'Trainee/junior roles pay $45K–$70K.',
+       'Median US DevOps salary ~$128K–$130K mid-career; SRE median $155K; Platform Engineer median $165K.'],
+      salary_progression: 'Trainee/junior $45K–$70K → entry DevOps $85K–$110K (first real DevOps role) → mid $115K–$160K → senior $150K–$180K+ → SRE $130K–$175K → Platform Engineer $140K–$190K+. Biggest jump from SRE to Platform Engineer (~15–25%). 5-year typical path: DevOps (1-2yr) → SRE (2-3yr) → Platform Engineer/Staff SRE (4-5yr).'
+    }
+  },
+  {
+    id: 'sw-cyber',
+    title: 'Non-Tech → Cybersecurity',
+    icon: '🔒',
+    tags: ['Security+','SOC','networking','offensive/defensive','certifications','6–18 months'],
+    detail: {
+      timeline: '6–18 months depending on starting point and specialization. SOC/analyst paths are more accessible early; offensive security (pentesting) requires deeper technical build. Study 8–15 hrs/week sustainable pace; bootcamp 3–6 months full-time; self-study 6–12 months. Most career changers take 12–18 months total including job search.',
+      key_skills: ['IT fundamentals first: CompTIA A+ (if no IT background), Network+ (networking basics essential).',
+       'Security+: threats, vulnerabilities, architecture, operations, program management.',
+       'SIEM tools (Splunk, Microsoft Sentinel).',
+       'Log analysis and incident response.',
+       'Home lab skills: Active Directory, Security Onion, vulnerable VMs.',
+       'Python scripting (basic, for automation later).',
+       'GRC frameworks: NIST CSF, ISO 27001, SOC 2 (for GRC path).',
+       'Hands-on platforms: TryHackMe (beginner), HackTheBox (intermediate).'],
+      certs: ['ISC2 Certified in Cybersecurity (CC) — free exam, best starting point 2026.',
+       'CompTIA Security+ — $425, appears in ~70–80% of entry-level postings, DoD 8570 compliant.',
+       'CompTIA Network+ — $359, prerequisite if no networking knowledge.',
+       'CompTIA CySA+ — $392, for SOC analyst track.',
+       'Google Cybersecurity Professional Certificate — $49/month, Coursera.',
+       'Cisco CCST Cybersecurity — $125, growing recognition.',
+       'Later: CEH, OSCP (offensive), CISSP (mid-career), CCSP (cloud security).'],
+      portfolio: ['Documented home lab: Active Directory setup, Security Onion monitoring, vulnerable machines.',
+       'TryHackMe/HackTheBox write-ups published on GitHub or blog.',
+       'Custom detection rules, automated vulnerability scans.',
+       'CTF (Capture The Flag) participation logs.',
+       'GitHub repo with lab logs, project documentation, and write-ups.',
+       'For GRC: sample policy documentation, compliance framework mapping.'],
+      entry_points: ['SOC Analyst Tier 1 (most common, monitors alerts, triages incidents).',
+       'GRC Analyst (policy/audit/compliance, strong for legal/finance/healthcare backgrounds).',
+       'IT Support with security duties; Junior Security Analyst; Compliance Analyst.',
+       'Remote/hybrid flexibility common especially for GRC.',
+       'Entry salary $60K–$80K (SOC), $70K–$90K (GRC), $65K–$85K (IT security specialist).',
+       'ISC2 Workforce Study: 4.8M global cybersecurity workforce gap, 19% increase; 32% projected job growth through 2032.',
+       'Big consulting firms (Deloitte, Accenture) actively hire career changers.'],
+      salary_progression: 'Entry $60K–$85K → SOC analyst mid $80K–$110K → senior SOC/engineer $110K–$150K → GRC mid $90K–$130K → cloud security analyst $80K–$110K entry, $130K+ senior → penetration tester (junior) $75K–$95K, senior $130K+ → CISO/leadership $180K–$300K+.'
+    }
+  },
+  {
+    id: 'sw-np',
+    title: 'Nurse → Nurse Practitioner / APRN',
+    icon: '⚕️',
+    tags: ['NP','PA','MSN','DNP','board cert','2–4 years'],
+    detail: {
+      timeline: 'BSN + MSN/DNP: 2–3 years full-time graduate study after BSN. ADN-to-NP bridge: 3–5 years total. RN with non-nursing bachelor\'s: direct-entry MSN/DNP programs, 2–3 years. Total from start of nursing: 6–8 years typical. NP projected growth 40% (2024–2034).',
+      key_skills: ['Active RN license and clinical nursing experience (1+ year often required for program admission).',
+       'Graduate-level advanced pathophysiology, pharmacology, health assessment.',
+       'Clinical decision-making and diagnostic reasoning.',
+       'Specialty certification (FNP, AGACNP, PMHNP, PNP, etc.).',
+       'State APRN licensure (varies by state; full practice authority states vs restricted).',
+       'Patient education, care coordination, ordering/interpreting diagnostics.',
+       'Prescribing authority (where granted).',
+       'Electronic health records proficiency.'],
+      certs: ['National NP certification in chosen specialty: AANP or ANCC.',
+       'State APRN licensure (separate from certification).',
+       'Specialty credentials: FNP-C, AGACNP-BC, PMHNP-BC, etc.',
+       'BLS/ACLS/PALS as required by practice setting.'],
+      portfolio: ['Clinical hours log (500–1,000 supervised clinical hours required for most programs).',
+       'Graduate clinical project / capstone demonstrating advanced practice competency.',
+       'Continuing education and specialty certifications tracked.',
+       'For academic/leadership roles: publications, presentations, committee work.',
+       'Professional organization membership (AANP, specialty organizations).'],
+      entry_points: ['NP roles in primary care (FNP), acute care (AGACNP), psychiatric-mental health (PMHNP), pediatrics, women\'s health, neonatology.',
+       'Employment settings: outpatient clinics, hospitals, urgent care, telehealth, specialty practices.',
+       'Internal promotion within current health system often easiest.',
+       'CRNA path requires intensive care experience first.',
+       'NPs can practice autonomously in full-practice-authority states.',
+       'Median NP salary $126,260–$129,210 (BLS 2025–2026); average $128,490–$135,000.',
+       'APRN average ~$109,039 across all types; CRNA median ~$223,210–$256,000.',
+       'Clinical Nurse Specialists and Nurse Midwives ~$128,000.'],
+      salary_progression: 'RN median $86,070–$93,600 → NP entry $97,960–$115,000 → NP mid-career $120,000–$145,000 → NP senior/specialty $140,000–$170,000 → CRNA $180,000–$260,000+. NP salary range $97,960–$169,950 depending on experience, location, specialty. 35% projected APRN job growth 2024–2034. DNP may command premium over MSN in some markets.'
+    }
+  },
+  {
+    id: 'sw-finance',
+    title: 'Finance/Accounting → Investment Banking or Quant',
+    icon: '📈',
+    tags: ['modeling','M&A','quant','C++','Python','MBA','CFA'],
+    detail: {
+      timeline: 'IB: 1–3 months intensive modeling/interview prep if you have a target-school background or can network into deals; otherwise longer path via Big 4 audit/trades or corporate finance → lateral. Quant: 6–12 months building C++/Python + math/stats depth; often requires strong STEM degree or masters/PhD for top quant funds.',
+      key_skills: ['IB: Financial modeling (DCF, LBO, M&A accretion/dilution, comparables), accounting deep fluency (3 statements + linkages), valuation methods, Excel speed/accuracy, PowerPoint pitch-deck quality, written & verbal communication, deal process knowledge (NDAs, LOIs, due diligence, closing).',
+       'Quant: C++ (low-latency) and/or Python, stochastic calculus/probability/statistics, time-series analysis, Monte Carlo, numerical methods, machine learning (increasingly), derivatives/pricing theory, Linux/low-latency systems awareness (for HFT).',
+       'Risk/Compliance: regulatory frameworks (Basel, SOX, AML/KYC, Dodd-Frank), data analysis, model validation, risk metrics, reporting.'],
+      certs: ['IB/consulting: MBA from a target school is the classic pivot path (post-2–5yr work exp).',
+       'CFA — valuable for asset management, research, some buyside roles, less direct for IB.',
+       'Quant: no single cert; strong math/CS/physics/eng degree or masters/PhD often expected at top funds. Relevant courses: Stochastic Calc, Machine Learning, C++ Concurrency.',
+       'FMVA/CFI (financial modeling) — useful practical skill signal for IB/corp fin, not a golden ticket.'],
+      portfolio: ['IB: modeling test prep (fourth-quarter models, LBO models from scratch), realistic pitch memo samples, market/sector knowledge (know recent deals in your target sector).',
+       'Quant: GitHub with C++/Python projects (pricing models, backtests, statistical analyses), Kaggle/competition results, research/technical writing.',
+       'For both: networks and relationships — IB hiring is heavily referral-driven. Informational interviews, alumni networks, on-cycle/off-cycle recruiting.'],
+      entry_points: ['IB: Analysts hired on-cycle (summer analyst → full-time) from target schools; off-cycle/evening/part-time analyst roles at Boutiques; lateral from Big 4 audit/Tax, corporate FP&A, or consulting (harder but possible).',
+       'Quant: graduate programs (masters/PhD) recruiting pipeline; internships; lateral from data science/ML engineering or financial engineering roles; boutique quant shops may be more accessible than top megafunds.',
+       'Risk/Compliance: more accessible; internal transition from audit/finance/ops roles common.'],
+      salary_progression: 'IB Analyst: $100K–$140K base + bonus → Associate (post-MBA or promoted): $150K–$220K + bonus → VP: $250K–$450K+ TC → MD: $500K–$1M+ TC. Quant: Analyst/junior quant $130K–$200K+ base → senior quant $250K–$500K+ → PM/lead quant $500K–$1M+ TC (hedge fund/top quant fund TC can exceed $750K avg; bonuses are a large share, highly variable).'
+    }
+  },
+  {
+    id: 'sw-consulting',
+    title: 'Non-Tech → Management Consulting (MBB / Big 4)',
+    icon: '🧠',
+    tags: ['case interviews','frameworks','PPT/Excel','MBA','networking'],
+    detail: {
+      timeline: '3–6 months dedicated case interview prep (if targeting MBB); longer if building from scratch or targeting via MBA. Big 4 consulting is more accessible without MBA for analyst roles.',
+      key_skills: ['Case interview mastery: structured problem-solving, hypothesis-driven thinking, math accuracy, synthesis & communication, framework flexibility.',
+       'Excel & PowerPoint at an advanced level — consulting work products are built here.',
+       'Business fundamentals: finance/accounting basics, strategy frameworks, ops/org/tech concepts, market analysis.',
+       'Communication: concise writing, executive presence, client-facing confidence, storytelling with data.',
+       'For tech consulting arms (Accenture, IBM, Big 4 tech advisory): cloud/data/security/AI literacy increasingly expected.'],
+      certs: ['No mandatory certs. Case interview performance IS the credential.',
+       'MBA from a top school is the classic MBB entry for experienced hires (post-2–5yr).',
+       'For specialized tracks (data, cloud, security consulting): relevant cloud/tech certs (AWS/Azure, ITIL, Security+) help credibility.'],
+      portfolio: ['Case practice — 50–100+ live case interviews with partners before MBB interviews.',
+       'Writing/thinking samples: business analysis, market memos, strategy teardowns (especially if targeting specialist/industry practices).',
+       'Resume that tells a story of impact in previous roles — consulting firms hire for problem-solving trajectory, leadership, and intellectual horsepower, not a specific major.'],
+      entry_points: ['MBB: on-cycle summer associate/analyst recruiting (undergrad/MBA); experienced hire via MBA + network; specialist/industry practice hires for domain experts.',
+       'Big 4 consulting (Deloitte, PwC, EY, KPMG) & Accenture: more volume, more accessible entry at analyst/consultant level; can be a stepping stone to MBB or specialized practices.',
+       'Boutique/specialist consulting firms: industry or function depth valued; often more accessible.',
+       'Internal: join a company in an analytical/operational role, build problem-solving reputation, and pivot to consulting internally or externally.'],
+      salary_progression: 'Business Analyst (BA, undergrad): $70K–$95K + bonus → Consultant/Associate: $90K–$140K total → Engagement Manager/Project Leader: $140K–$200K total → Principal/Senior Manager: $180K–$260K → Partner/MD: $300K–$700K+ TC (highly variable with originations). Consulting is demanding (long hours) but offers breadth and exit opportunities.'
+    }
+  },
+  {
+    id: 'sw-trades-mgmt',
+    title: 'Skilled Trade / Manufacturing → Engineering Management',
+    icon: '🏗️',
+    tags: ['Lean','Six Sigma','PMP','MBA','people mgmt','continuous improvement'],
+    detail: {
+      timeline: '2–5+ years: many engineering managers start as engineers or trades pros with strong floor/ops experience, then layer formal management/process skills. PMP or Lean/Six Sigma Black Belt + people leadership experience accelerates the path.',
+      key_skills: ['Deep operational/technical knowledge of the floor/process/trade — credibility from having done the work.',
+       'Lean / Six Sigma: process improvement, waste elimination, root-cause analysis, SPC, Kaizen, value stream mapping. Black Belt is the gold standard for process leadership.',
+       'Project management: scheduling, resource allocation, budgeting, risk, stakeholder communication. PMP or equivalent experience.',
+       'People management & leadership: hiring, coaching, performance mgmt, conflict resolution, safety culture, labor/union awareness (if applicable).',
+       'Data-driven operations: KPIs, dashboards, Excel/ERP data, basic analytics, trend analysis, continuous improvement metrics.',
+       'For manufacturing/plant management: P&L awareness, capital planning, capacity/utilization, quality systems, regulatory/safety compliance.'],
+      certs: ['Lean Six Sigma Green Belt → Black Belt (highly valued in manufacturing/industrial mgmt).',
+       'PMP (Project Management Professional) or CAPM if project/program leadership is the path.',
+       'MBA (optional but helpful for senior/general management tracks, especially if targeting director/VP).',
+       'Engineering management certs / professional engineering (PE) license where relevant (construction, utilities, certain manufacturing).'],
+      portfolio: ['Documented continuous improvement projects with measurable results (cost saved, throughput gained, defect reduction) — concrete impact stories.',
+       'Project leadership evidence: led a capital project, a line/process redesign, a new product introduction, a safety initiative.',
+       'People leadership: team size managed, turnover improvements, training/mentorship programs built.',
+       'For trades path: journeyman/master + foreman/superintendent experience, project quotes/estimates, client relationships, crew leadership.'],
+      entry_points: ['Lead/supervisor roles → manager: the most common path — demonstrate operational excellence + people leadership, then step up.',
+       'Engineering/process/Supply Chain Analyst → project/program lead → engineering/operations manager.',
+       'Trades: journeyman → lead/foreman → superintendent → operations/project management.',
+       'Internal promotion is common — companies value operators who know the business and can lead teams. Lateral moves to similar industries also work.'],
+      salary_progression: 'Lead/Supervisor: $70K–$110K → Engineering/Operations Manager: $90K–$150K → Senior Manager/Plant Manager: $130K–$200K → Director of Manufacturing/Operations: $160K–$240K → VP Operations/COO: $250K–$500K+ TC. Skilled trade master/foreman: $90K–$130K+; superintendent/ project exec: $110K–$170K+; heavy civil/energy/infrastructure at the high end.'
+    }
+  }
+];
+
+// ─── RENDER INDUSTRY GRID ──────────────────────────────────────
+const grid = document.getElementById('industryGrid');
+grid.innerHTML = industries.map((ind, i) => `
+  <div class="industry-card" data-id="${ind.id}" onclick="openIndustry('${ind.id}')">
+    <div class="rank">#${i+1}</div>
+    <h3>${ind.name}</h3>
+    <div class="meta">
+      <span class="open">${ind.openRoles} open roles</span>
+      <span>${ind.companies.length} key employers</span>
+    </div>
+    <div class="desc">${ind.desc.slice(0, 180)}…</div>
+    <div class="tags">${ind.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+  </div>
+`).join('');
+
+// ─── OPEN INDUSTRY ─────────────────────────────────────────────
+function openIndustry(id) {
+  const ind = industries.find(i => i.id === id);
+  if (!ind) return;
+  const detail = document.getElementById('industryDetail');
+  detail.classList.add('open');
+  detail.innerHTML = `
+    <div class="detail-header">
+      <div>
+        <h3>${ind.name}</h3>
+        <div class="meta" style="font-size:12px;color:var(--muted);margin-top:2px;">
+          <span class="open">${ind.openRoles} open roles</span> · ${ind.companies.length} key employers · ${ind.growth}
+        </div>
+      </div>
+      <button class="close-btn" onclick="closeIndustry()" aria-label="Close">×</button>
+    </div>
+    <p class="detail-overview">${ind.desc}</p>
+    <div class="tags" style="margin-bottom:18px;">${ind.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+
+    <div class="bands">
+      ${renderBand('fresher', 'Fresher / Fresh Graduate', '0–2 years · entry-level, often no prior professional experience', 'badge-fresher', ind.roles.fresher)}
+      ${renderBand('early', 'Early Career', '2–5 years · building depth, first specialization', 'badge-early', ind.roles.early)}
+      ${renderBand('mid', 'Mid-Career', '5–10 years · senior individual contributor or manager track', 'badge-mid', ind.roles.mid)}
+      ${renderBand('senior', 'Senior / Lead', '10–15+ years · expert or people-leadership', 'badge-senior', ind.roles.senior)}
+      ${renderBand('exec', 'Director / VP / C-Suite', '15+ years · executive leadership, strategy & P&L', 'badge-exec', ind.roles.exec)}
+    </div>
+
+    <div class="companies-box">
+      <h4>Companies hiring at scale — September 2026</h4>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        ${ind.companies.map(c => `
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:8px 12px;background:var(--surface2);border-radius:6px;border:1px solid var(--border);">
+            <div style="flex:1;">
+              <div style="font-weight:600;font-size:13px;">${c.name}</div>
+              <div style="font-size:11px;color:var(--muted);margin-top:1px;">📍 ${c.hq}</div>
+              <div style="font-size:11px;color:var(--text);margin-top:2px;line-height:1.45;">${c.hint}</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+  // Scroll to detail
+  detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function renderBand(band, title, sub, badgeClass, roles) {
+  return `
+    <div class="band">
+      <div class="band-header">
+        <span class="band-badge ${badgeClass}">${band}</span>
+        <div>
+          <div class="band-title">${title}</div>
+          <div class="band-sub">${sub}</div>
+        </div>
+      </div>
+      <div class="role-list">
+        ${roles.map(r => `
+          <div class="role-row">
+            <div>
+              <div class="role-name">${r.name}</div>
+              <div class="role-skills">${r.skills.split(',').map(s => `<span class="skill-tag">${s.trim()}</span>`).join('')}</div>
+            </div>
+            <div class="salary">${r.salary}</div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+function closeIndustry() {
+  document.getElementById('industryDetail').classList.remove('open');
+}
+
+// ─── RENDER SWITCH GRID ────────────────────────────────────────
+const switchGrid = document.getElementById('switchGrid');
+switchGrid.innerHTML = switchGuides.map(g => `
+  <div class="switch-card" onclick="openSwitch('${g.id}')">
+    <div class="icon">${g.icon}</div>
+    <h4>${g.title}</h4>
+    <div class="sub">${g.detail.timeline}</div>
+    <div class="tags">${g.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+  </div>
+`).join('');
+
+function openSwitch(id) {
+  const g = switchGuides.find(x => x.id === id);
+  if (!g) return;
+  const detail = document.getElementById('switchDetail');
+  detail.classList.add('open');
+  detail.innerHTML = `
+    <div class="detail-header" style="margin-bottom:12px;">
+      <h3>${g.icon} ${g.title}</h3>
+      <button class="close-btn" onclick="closeSwitch()" aria-label="Close">×</button>
+    </div>
+    <div class="switch-meta">${g.detail.timeline}</div>
+
+    <h5>Key Skills to Build</h5>
+    <ul>${g.detail.key_skills.map(s => `<li>${s}</li>`).join('')}</ul>
+
+    <h5>Certifications / Credentials</h5>
+    <ul>${g.detail.certs.map(c => `<li>${c}</li>`).join('')}</ul>
+
+    <h5>Portfolio / Proof of Work</h5>
+    <ul>${g.detail.portfolio.map(p => `<li>${p}</li>`).join('')}</ul>
+
+    <h5>Entry Points</h5>
+    <ul>${g.detail.entry_points.map(l => `<li>${l}</li>`).join('')}</ul>
+
+    <h5>Salary Progression</h5>
+    <div class="salary-flow">${g.detail.salary_progression}</div>
+  `;
+  detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function closeSwitch() {
+  document.getElementById('switchDetail').classList.remove('open');
+}
+
+// ─── SKILLS MATRIX ─────────────────────────────────────────────
+const skillsData = [
+  { family: 'Artificial Intelligence & Machine Learning', premium: '25–40% over general SWE', order: 'Python → SQL → PyTorch/Scikit-learn → data pipelines → MLOps → LLM fine-tuning (RLHF/DPO) → distributed GPU training → evaluation/RAG', certs: 'None required; portfolio essential. Cloud ML certs optional.' },
+  { family: 'Software Engineering', premium: 'System design depth; AI literacy baseline', order: 'One language deeply → Git/GitHub → data structures/algos (interviews) → framework (React/Django/Spring) → APIs + DBs → testing/CI/CD → cloud basics → system design (mid/senior)', certs: 'Not required; portfolio > certs. Cloud certs help for infra-heavy roles.' },
+  { family: 'Cloud / DevOps / SRE', premium: 'Kubernetes + Terraform + multi-cloud ≤ strong demand', order: 'Linux + networking → one cloud (AWS/Azure/GCP) → Terraform → Docker → Kubernetes → CI/CD → observability → scripting (Python/Go) → security basics → cloud architect depth', certs: 'AWS SAA, Azure Admin, CKA/CKAD, Terraform Associate — strong signal here.' },
+  { family: 'Cybersecurity', premium: 'Cloud security + K8s security; OSCP for pentesting prestige', order: 'Networking + OS fundamentals → Security+ baseline → SIEM/IR (SOC path) OR web app sec + recon/exploit (pentest path) → scripting → cloud security → specialization → leadership/certs (CISSP)', certs: 'Security+, CySA+, BTL1, eJPT, OSCP, CISSP (senior), cloud security specialties.' },
+  { family: 'Data / Analytics', premium: 'SQL + business acumen; analytics engineering (dbt/warehouse) hot', order: 'Excel → SQL (deep) → Python (pandas) → stats/A-B testing → viz (Tableau/Power BI) → data pipelines/warehousing → dbt/analytics engineering → ML basics (data scientist track)', certs: 'Google Data Analytics, Tableau Specialist, Azure Data Analyst; portfolio > certs.' },
+  { family: 'Product Management', premium: 'Domain expertise + data literacy + technical fluency', order: 'Product sense/user empathy → prioritization frameworks → SQL/data literacy → technical fluency (APIs, architecture basics) → experimentation/metrics → communication/writing → roadmap/strategy', certs: 'Reforge strong for experienced; APM programs for early career; cloud/AI literacy helpful.' },
+  { family: 'UX / Product Design', premium: 'Case study depth + accessibility (WCAG) for enterprise', order: 'Figma mastery → UX research methods → IxD/IA → visual design fundamentals → design systems → dev handoff → metrics/business thinking → accessibility', certs: 'Portfolio > certs. Google UX cert entry signal; IAAP accessibility certs differentiate.' },
+  { family: 'Management Consulting', premium: 'Case interview mastery; sector/tech specialization', order: 'Case interview prep (50–100+ live) → Excel/PPT advanced → business/strategy fundamentals → communication/storytelling → sector/tech specialization (cloud/AI/data) → MBA (if targeting MBB experienced hire)', certs: 'No certs needed; case performance is the credential. MBA for MBB pivot. Tech certs for tech consulting arms.' },
+  { family: 'Investment Banking / Corporate Finance', premium: 'Deal execution + modeling speed/accuracy; MBA target-school pivot', order: 'Accounting fluency (3 statements) → financial modeling (DCF, LBO, M&A) → valuation → Excel/PPT mastery → deal process → sector expertise → networking/recruiting → MBA (pivot path)', certs: 'CFA for asset mgmt/research; FMVA/CFI for modeling skills. MBA classic pivot.' },
+  { family: 'Quantitative Finance', premium: 'C++/low-latency + math/stats depth; ML increasing', order: 'C++ (concurrency/low-latency) and/or Python → probability/stochastic calc → time-series/ML → numerical methods → derivatives pricing → systems/linux (HFT track) → research/portfolio building', certs: 'No standard certs; strong STEM degree/masters/PhD common. Courses + projects + competitions matter.' },
+  { family: 'Healthcare — Nursing / APP', premium: 'Specialty + procedural competence + multi-state licensure; behavioral health/surgical premium', order: 'RN licensure → bedside/clinical experience (1–3+ yr) → NP/PA program (MSN/DNP or PA master\'s) → board cert (ANCC/AANP or PANCE) → state licensure/prescriptive authority → specialty cert (optional) → leadership track', certs: 'ANCC/AANP NP cert; PANCE for PA; specialty certs; multi-state compact licensure; CRNA path much longer (DNP + experience).' },
+  { family: 'Healthcare — Health Services Management', premium: 'MHA/MBA + operations + EHR/data; clinical background helps', order: 'Clinical or admin experience → MHA/MPA/MBA → departmental management → quality/accreditation/regulatory → P&L/operations → informatics (optional) → director/VP track', certs: 'MHA/MPA/MBA preferred for manager+; FACHE (Fellow, American College of Healthcare Executives) for senior; Epic/Cerner certifications valuable.' },
+  { family: 'Skilled Trades / Manufacturing / Construction', premium: 'Lean/Six Sigma Black Belt + project mgmt + people leadership; PE where relevant', order: 'Trade/apprenticeship or engineering degree → hands-on skill mastery → journeyman/engineer → lead/supervisor → Lean/Six Sigma or PMP → people management → project/plant management → director/VP', certs: 'Lean Six Sigma (GB/BB), PMP, PE (where applicable), OSHA safety, trade licenses/journeyman certs.' },
+  { family: 'Sales (SaaS / Enterprise)', premium: 'Full-cycle enterprise selling + technical fluency + multi-threading', order: 'SDR/BDR (prospecting, qualifying) → AE (full-cycle, discovery, demo, negotiation) → enterprise AE → sales leadership (hiring, coaching, forecast, process) → CRO/VP', certs: 'No standard certs; proof is quota attainment. Sales methodologies (MEDDIC, Challenger) help; technical certs for solutions engineering track.' },
+  { family: 'Energy / Utilities / Renewables', premium: 'Grid/transmission + project development + regulatory/ policy fluency', order: 'Engineering degree or trade training → EIT/tech certification → field/ops experience → project management → specialized engineering (power systems/grid) or project development (renewables) → director/VP', certs: 'EIT → PE (where applicable); NABCEP (solar); NERC (grid); project management; safety certs (OSHA/MSHA/NRC).' }
+];
+
+const skillsContent = document.getElementById('skillsContent');
+skillsContent.innerHTML = `
+  <div style="display:grid;gap:10px;margin-top:8px;">
+    ${skillsData.map(s => `
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+          <div>
+            <h4 style="font-size:15px;font-weight:600;margin-bottom:2px;">${s.family}</h4>
+            <div style="font-size:12px;color:var(--muted);">${s.order}</div>
+          </div>
+          <div style="text-align:right;min-width:180px;">
+            <div style="font-size:12px;color:var(--orange);font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:4px;">Salary Premium</div>
+            <div style="font-size:13px;color:var(--text);font-family:var(--mono);">${s.premium}</div>
+            <div style="font-size:12px;color:var(--muted);margin-top:6px;border-top:1px solid var(--border);padding-top:6px;">${s.certs}</div>
+          </div>
+        </div>
+      </div>
+    `).join('')}
+  </div>
+`;
+
+// ─── NAV / MOBILE ──────────────────────────────────────────────
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = a.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// Active nav on scroll
+const sections = ['snapshot','industries','switching','skills'];
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = 'snapshot';
+  for (const id of sections) {
+    const el = document.getElementById(id + '-section') || document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 150) current = id;
+  }
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current || a.getAttribute('href') === '#' + current + '-section');
+  });
+  // To-top button
+  document.getElementById('to-top').classList.toggle('show', window.scrollY > 400);
+});
+document.getElementById('to-top').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Close detail on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeIndustry(); closeSwitch(); }
+});
+</script>
+</body>
+</html>

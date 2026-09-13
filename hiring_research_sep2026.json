@@ -1,0 +1,316 @@
+{
+  "healthcare": [
+    {
+      "name": "UnitedHealth Group",
+      "hq": "Eden Prairie, MN",
+      "open_roles_hint": "~5,870+ open positions on careers site",
+      "trait": "Largest US health insurer by revenue; Optum health services platform spans pharmacy, care delivery, and data analytics."
+    },
+    {
+      "name": "CVS Health",
+      "hq": "Woonsocket, RI",
+      "open_roles_hint": "Hundreds of openings across pharmacy, retail clinics, and corporate",
+      "trait": "Operates CVS Pharmacy, Aetna, and MinuteClinic; one of the largest US healthcare retailers with 9,000+ pharmacy locations."
+    },
+    {
+      "name": "AbbVie",
+      "hq": "North Chicago, IL",
+      "open_roles_hint": "150+ open clinical and manufacturing roles",
+      "trait": "Immunology powerhouse (Skyrizi, Rinvoq) replacing Humira revenue; strong pipeline in oncology and neuroscience."
+    },
+    {
+      "name": "Eli Lilly",
+      "hq": "Indianapolis, IN",
+      "open_roles_hint": "150+ open manufacturing and R&D positions",
+      "trait": "GLP-1 market leader with Mounjaro and Zepbound driving massive manufacturing expansion and hiring surge."
+    },
+    {
+      "name": "Regeneron",
+      "hq": "Tarrytown, NY",
+      "open_roles_hint": "250+ open positions",
+      "trait": "Fast-growing biotech with flagship Eylea and Dupixent; strong antibody discovery platform and in-house manufacturing."
+    },
+    {
+      "name": "Novo Nordisk",
+      "hq": "Plainsboro, NJ (US HQ); Bagsværd, Denmark (global)",
+      "open_roles_hint": "Multiple cardiometabolic and field sales roles",
+      "trait": "Ozempic and Wegovy dominance driving aggressive US hiring; expanding manufacturing footprint massively in US."
+    },
+    {
+      "name": "Moderna",
+      "hq": "Cambridge, MA",
+      "open_roles_hint": "Active hiring across R&D, manufacturing, and commercial",
+      "trait": "mRNA platform expanding beyond COVID vaccines into flu, RSV, and personalized cancer vaccines."
+    },
+    {
+      "name": "Johnson & Johnson Innovative Medicine",
+      "hq": "New Brunswick, NJ",
+      "open_roles_hint": "Strong hiring in oncology, immunology, and medtech",
+      "trait": "Diversified healthcare giant spanning pharmaceuticals and medical devices; largest US healthcare company by market cap."
+    }
+  ],
+  "manufacturing_industrial": [
+    {
+      "name": "Tesla",
+      "hq": "Austin, TX",
+      "open_roles_hint": "Terafab semiconductor division hiring; dozens of chip/process engineer roles",
+      "trait": "Building Terafab, a planned largest-ever chip fab combining logic and memory under one roof, in collaboration with SpaceX."
+    },
+    {
+      "name": "Boeing",
+      "hq": "Arlington, VA (HQ); Everett, WA / Renton, WA (manufacturing)",
+      "open_roles_hint": "100-140 factory workers per week, 34,000+ unionized workers in Pacific Northwest",
+      "trait": "Scaling 737 MAX production lines and 777X; one of largest US manufacturing employers with massive apprenticeship programs."
+    },
+    {
+      "name": "Caterpillar",
+      "hq": "Irving, TX (global HQ); East Peoria, IL (historic)",
+      "open_roles_hint": "600 new production jobs at Sanford, NC plant alone (May 2026)",
+      "trait": "World's largest construction and mining equipment manufacturer; robust manufacturing hiring across US plants."
+    },
+    {
+      "name": "SpaceX",
+      "hq": "Hawthorne, CA / Starbase, TX / Bastrop, TX",
+      "open_roles_hint": "60+ open positions in Silicon division; thousands of applicants per entry-level role",
+      "trait": "Leading space economy hiring; preparing for IPO; scaling Starlink satellite production in-house."
+    },
+    {
+      "name": "Lockheed Martin",
+      "hq": "Bethesda, MD",
+      "open_roles_hint": "10,614 open postings (largest increase among all US employers YoY)",
+      "trait": "Second-most open positions among all US employers; defense, space, and advanced manufacturing dominance."
+    },
+    {
+      "name": "RTX Corp (Raytheon Technologies)",
+      "hq": "Arlington, VA",
+      "open_roles_hint": "12,871 global openings — leads all US employers in posting volume",
+      "trait": "Largest defense/aerospace employer by open roles; Collins Aerospace and Pratt & Whitney driving skilled manufacturing demand."
+    },
+    {
+      "name": "GE Vernova",
+      "hq": "Boston, MA",
+      "open_roles_hint": "Active hiring in renewables, power conversion, field service, and turbine tech roles",
+      "trait": "Spun off from GE; leading energy technology company driving massive renewable infrastructure and power grid modernization."
+    }
+  ],
+  "retail_consumer": [
+    {
+      "name": "Walmart",
+      "hq": "Bentonville, AR",
+      "open_roles_hint": "2.1 million associates globally; goal of 200,000 in-demand roles filled by end of 2026",
+      "trait": "Largest private employer in the United States; hiring across retail, supply chain, skilled trades, and technology."
+    },
+    {
+      "name": "Amazon",
+      "hq": "Seattle, WA",
+      "open_roles_hint": "Continuous large-scale hiring across US fulfillment, logistics, and corporate",
+      "trait": "Largest e-commerce and cloud logistics employer; seasonal hiring surges of 100,000+ during peak periods."
+    },
+    {
+      "name": "Home Depot",
+      "hq": "Atlanta, GA / Marietta, GA",
+      "open_roles_hint": "130,000+ workers planned with Lowe's combined (Fortune report Feb 2026)",
+      "trait": "World's largest home improvement retailer; 2,300+ stores; heavy hiring for retail associates, supply chain, and PRO customers."
+    },
+    {
+      "name": "Lowe's",
+      "hq": "Mooresville, NC",
+      "open_roles_hint": "130,000+ workers planned combined with Home Depot (Feb 2026 report)",
+      "trait": "Second-largest home improvement retailer; $86B+ fiscal 2025 sales; hiring across stores, remote coordination, and installation services."
+    },
+    {
+      "name": "TJX Companies",
+      "hq": "Framingham, MA",
+      "open_roles_hint": "1,846 new jobs added globally Aug 30, 2026 across TJ Maxx, Marshalls, HomeGoods, Winners",
+      "trait": "Off-price retail leader with strong seasonal and store-level hiring; robust international footprint."
+    },
+    {
+      "name": "Michaels",
+      "hq": "Irving, TX",
+      "open_roles_hint": "10,000+ seasonal Team Member roles for holiday 2026",
+      "trait": "Leading arts and crafts retailer; 1,300+ stores in 49 states; nearly 50% of seasonal roles converted to permanent last year."
+    },
+    {
+      "name": "Costco",
+      "hq": "Issaquah, WA",
+      "open_roles_hint": "Continuous hiring across warehouses, manufacturing (Costco Wholesale Industries), and corporate",
+      "trait": "Employee-friendly warehouse club model; new locations under construction driving proactive hiring 12 weeks before openings."
+    },
+    {
+      "name": "WinCo Foods",
+      "hq": "Boise, ID",
+      "open_roles_hint": "132+ active job postings; 22,000+ employee owners",
+      "trait": "Second-largest employee-owned company in the US; growing chain across 10 western states with own distribution and transportation."
+    }
+  ],
+  "transport_logistics": [
+    {
+      "name": "XPO Logistics",
+      "hq": "Greenwich, CT",
+      "open_roles_hint": "4,000+ jobs across North America; 1,400+ CDL-A driver and dockworker positions",
+      "trait": "Second-largest contract logistics provider worldwide; 290 service centers; tuition-free CDL training program."
+    },
+    {
+      "name": "Flexport",
+      "hq": "San Francisco, CA / Bellevue, WA",
+      "open_roles_hint": "149 open positions (July 2026); 7% headcount increase; ~443 LinkedIn postings",
+      "trait": "Digital freight forwarder disrupting global logistics; now building autonomous freight systems division post-Convoy acquisition."
+    },
+    {
+      "name": "UPS",
+      "hq": "Sandy Springs, GA (global HQ); Atlanta, GA",
+      "open_roles_hint": "Large-scale driver and warehouse hiring; major Atlanta hub operations at College Park",
+      "trait": "One of world's largest package delivery companies; Atlanta metro is a top logistics hiring hub with UPS, Delta Cargo, and Home Depot supply chain."
+    },
+    {
+      "name": "FedEx",
+      "hq": "Memphis, TN",
+      "open_roles_hint": "Ongoing driver, warehouse, and aviation roles across US network",
+      "trait": "Global logistics leader with 220+ countries; major seasonal hiring; large fleet and aviation operations."
+    },
+    {
+      "name": "Ryder System",
+      "hq": "Miami, FL",
+      "open_roles_hint": "Logistics manager and fleet roles actively posted",
+      "trait": "Leading commercial fleet management, logistics, and supply chain solutions provider; strong 3PL growth."
+    },
+    {
+      "name": "Werner Enterprises",
+      "hq": "Omaha, NE",
+      "open_roles_hint": "Transportation manager and CDL driver positions actively posted",
+      "trait": "Major US trucking and logistics provider; diverse carrier services and dedicated contract carriage."
+    },
+    {
+      "name": "Lockheed Martin / RTX (space sector)",
+      "hq": "Bethesda, MD / Arlington, VA",
+      "open_roles_hint": "RTX: 12,871 global openings; Lockheed: 10,614 (up 5,000+ YoY)",
+      "trait": "Aerospace/defense leaders dominating space sector hiring; 56% report difficulty sourcing skilled manufacturing talent."
+    }
+  ],
+  "energy_utilities": [
+    {
+      "name": "NextEra Energy",
+      "hq": "Juno Beach, FL",
+      "open_roles_hint": "Major hiring surge post-Dominion Energy merger announcement (May 2026)",
+      "trait": "World's largest wind and solar energy producer; merging with Dominion to create world's largest regulated electric utility; driving clean energy infrastructure boom."
+    },
+    {
+      "name": "Dominion Energy",
+      "hq": "Richmond, VA",
+      "open_roles_hint": "Active hiring across transmission, distribution, and renewables divisions",
+      "trait": "Major US electric and gas utility; combining with NextEra in landmark $67B deal to create energy infrastructure giant."
+    },
+    {
+      "name": "GE Vernova",
+      "hq": "Boston, MA",
+      "open_roles_hint": "Active roles in power conversion, solar/battery storage, field service, turbine tech, and engineering",
+      "trait": "Leading global energy technology company; spun off from GE; key driver of grid modernization and renewable energy project hiring."
+    },
+    {
+      "name": "Tesla Energy",
+      "hq": "Austin, TX",
+      "open_roles_hint": "Hiring ramp-up for 100 GW US solar manufacturing goal by end of 2028",
+      "trait": "Musk's audacious plan to become largest US solar component manufacturer; massive new hiring for engineering and manufacturing scale-up."
+    },
+    {
+      "name": "Hanwha Renewables",
+      "hq": "Irvine, CA",
+      "open_roles_hint": "Multiple roles: Asset Management Analyst, Solution Engineer (ESS), Director Build-Transfer Origination",
+      "trait": "Hanwha Group subsidiary (Fortune Global 500); designs, builds, and manages utility-scale solar PV and battery energy storage across North America."
+    },
+    {
+      "name": "EDP Renewables North America",
+      "hq": "Houston, TX",
+      "open_roles_hint": "Active hiring: interns, asset managers; 201-500 employees",
+      "trait": "Develops, constructs, owns, and operates wind farms and solar parks throughout North America; part of EDP Group."
+    }
+  ],
+  "construction_realestate": [
+    {
+      "name": "D.R. Horton",
+      "hq": "Richardson, TX",
+      "open_roles_hint": "11,788 employees; consistent roles across construction, sales, and corporate",
+      "trait": "Largest homebuilder in the US by volume; building across high-growth states (TX, FL, AZ, CA)."
+    },
+    {
+      "name": "Lennar",
+      "hq": "Sunnyvale, CA",
+      "open_roles_hint": "Active hiring across construction, sales, and corporate functions",
+      "trait": "One of America's leading homebuilders; strong presence in Sun Belt growth markets."
+    },
+    {
+      "name": "Prologis",
+      "hq": "The Woodlands, TX",
+      "open_roles_hint": "Active hiring across logistics real estate and corporate",
+      "trait": "World's largest owner/operator of logistics real estate; dominant in industrial warehouse properties driving e-commerce growth."
+    },
+    {
+      "name": "The Home Depot",
+      "hq": "Atlanta, GA",
+      "open_roles_hint": "130,000+ workers planned (combined with Lowe's); active retail, supply chain, and PRO hiring",
+      "trait": "World's largest home improvement retailer; 2,300+ stores; major retail construction-adjacent employer."
+    },
+    {
+      "name": "Lowe's",
+      "hq": "Mooresville, NC",
+      "open_roles_hint": "130,000+ workers planned (combined with Home Depot); multiple remote and in-store roles",
+      "trait": "Second-largest home improvement retailer; $86B+ sales; services project coordinator and installation roles growing."
+    },
+    {
+      "name": "PulteGroup",
+      "hq": "Atlanta, GA",
+      "open_roles_hint": "Active hiring across homebuilding divisions",
+      "trait": "Major US homebuilder with multiple brands (Pulte Homes, Centex, Del Webb, Milestone); strong Sun Belt presence."
+    }
+  ],
+  "sales_saaS": [
+    {
+      "name": "Snowflake",
+      "hq": "Bozeman, MT (admin) / Menlo Park, CA (ops)",
+      "open_roles_hint": "414 open roles total; 128 in sales/account management (67 enterprise sales, 61 combined sales)",
+      "trait": "Cloud data platform hiring ~50% of headcount into GTM functions — unusual ratio; strong sales engineering org; AI/ML analytics expansion."
+    },
+    {
+      "name": "ServiceNow",
+      "hq": "San Diego, CA",
+      "open_roles_hint": "12 open sales roles listed in seller reports; broader GTM hiring",
+      "trait": "Enterprise workflow automation platform; digital transformation driver; enterprise AE roles with complex multi-stakeholder deals."
+    },
+    {
+      "name": "Salesforce",
+      "hq": "San Francisco, CA",
+      "open_roles_hint": "21 open sales roles; 110k OTE SDR, 320k OTE AE",
+      "trait": "The CRM platform that every other SaaS plugs into; large established sales org with formal BDR/SDR programs."
+    },
+    {
+      "name": "Workday",
+      "hq": "Pleasanton, CA",
+      "open_roles_hint": "63% of open reqs on its own platform (large enterprise HCM scale); broad GTM hiring",
+      "trait": "Enterprise cloud HCM and finance platform; runs the Workday ATS that 713,606+ job postings live on (63% of all crawled postings)."
+    },
+    {
+      "name": "HubSpot",
+      "hq": "Cambridge, MA",
+      "open_roles_hint": "95k OTE BDR, 240k OTE AE; active growth-stage GTM hiring",
+      "trait": "All-in-one CRM, marketing, sales, service, and CMS for SMB/mid-market; strong inbound sales culture."
+    },
+    {
+      "name": "OpenAI",
+      "hq": "San Francisco, CA",
+      "open_roles_hint": "~20% of all open roles in sales, partnerships, and revenue functions",
+      "trait": "Leading AI platform with massive enterprise demand; ChatGPT and API platform; GTM is largest hiring category as revenue scales."
+    },
+    {
+      "name": "Anthropic",
+      "hq": "San Francisco, CA",
+      "open_roles_hint": "~20% of all open roles in sales (similar to OpenAI); $47B annualized revenue, 80% enterprise",
+      "trait": "Claude AI enterprise platform; 'Palantirization of everything' — enterprise sales motion getting more technical and data-dependent."
+    },
+    {
+      "name": "Amazon Web Services (AWS)",
+      "hq": "Seattle, WA",
+      "open_roles_hint": "45 open sales roles — highest among tech/saas companies surveyed",
+      "trait": "Cloud infrastructure sales leader; senior AEs regularly exceed $300K OTE; complex 6-12 month enterprise deal cycles."
+    }
+  ]
+}
